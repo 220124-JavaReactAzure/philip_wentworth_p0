@@ -36,7 +36,7 @@ public class WelcomeMenu extends Menu{
 			shutdown();
 			break;
 		default:
-			System.out.println("What on earth are you trying to tell me to do?!?!");
+			System.out.println("Invalid option, please enter a single digit for your menu choice.");
 			break;
 		}
 		
