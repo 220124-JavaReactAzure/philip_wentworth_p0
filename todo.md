@@ -24,13 +24,11 @@
 - CharacterCompareMenu
 
 ## Models
-- Statistic (statisticName, statisticValue)
-- MyCharacter (characterName, statistics[6], userID)
-- User (id, userName, password, email)
+- DONE MyCharacter (id, characterName, statistics[], userID)
+- DONE User (id, userName, password, email)
 
 ## Services
-- StatisticService (rollStatistic, isStatisticValid)
-- MyCharacterService (generateMyCharacter, updateStatistic, viewMyCharacter, compareMyCharacters, isCharacterNameValid)
+- MyCharacterService (generateMyCharacter, updateStatistic, viewMyCharacter, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printStatistic)
 - UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid, isStatisticValid)
 
 ## Util
