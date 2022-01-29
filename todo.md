@@ -10,10 +10,12 @@
 - InvalidCharacterNameException
 - InvalidUsernameException
 - InvalidEmailException
+- UsernameAlreadyExistsException
+- EmailAlreadyExistsException
 
 ## Menus
-- Menu abstract class
-- MainMenu
+- Menu abstract class (getName, getRoute, render)
+- WelcomeMenu
 - UserRegisterMenu
 - UserLoginMenu
 - CharacterGenerateMenu
@@ -22,15 +24,17 @@
 - CharacterCompareMenu
 
 ## Models
-- MyCharacter
-- User
+- Statistic (statisticName, statisticValue)
+- MyCharacter (characterName, statistics[6], userID)
+- User (id, userName, password, email)
 
 ## Services
-- MyCharacterService
-- UserService
+- StatisticService (rollStatistic, isStatisticValid)
+- MyCharacterService (generateMyCharacter, updateStatistic, viewMyCharacter, compareMyCharacters, isCharacterNameValid)
+- UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid, isStatisticValid)
 
 ## Util
-- AppState
-- Collection abstract class
-- ArrayList
-- MenuRouter
+- AppState (public void startup, public static void shutdown)
+- Collection interface (add, contains, isEmpty, remove(index), remove(element), size)
+- ArrayList implements Collection
+- MenuRouter (addMenu, transfer)

@@ -6,7 +6,7 @@ Character Management System helps users generate and keep track of characters fo
 
 ## User Stories 
 
-As a user, I can:    
+## CORE FEATURES: As a user, I can    
 
 - register a new user account with the system (must be secured with a password)
 - login with my existing credentials
@@ -15,3 +15,7 @@ As a user, I can:
 - select a character and view their statistics
 - move points from one statistic into another while viewing a selected character's statistics. A statistic cannot be below 3 or above 18.
 - select 2 characters and view a side by side comparison of their statistics
+
+## BONUS FEATURES: As a user, I can 
+- Delete my own account, cascade deleting all Characters I created
+- Delete a Character I created
