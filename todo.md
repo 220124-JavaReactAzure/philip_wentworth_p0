@@ -35,6 +35,6 @@
 
 ## Util
 - AppState (public void startup, public static void shutdown)
-- Collection interface (add, contains, isEmpty, remove(index), remove(element), size)
-- ArrayList implements Collection
+- DONE Collection interface (add, contains, isEmpty, remove(element), size)
+- DONE ArrayList implements Collection (get)
 - MenuRouter (addMenu, transfer)
