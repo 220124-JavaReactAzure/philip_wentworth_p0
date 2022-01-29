@@ -18,6 +18,7 @@
 - DONE WelcomeMenu
 - UserRegisterMenu
 - UserLoginMenu
+- UserDashboardMenu
 - CharacterGenerateMenu
 - CharacterListMenu
 - StatisticModifyMenu
