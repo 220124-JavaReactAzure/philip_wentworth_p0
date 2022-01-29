@@ -13,18 +13,24 @@
 
 ## Menus
 - Menu abstract class
+- MainMenu
+- UserRegisterMenu
+- UserLoginMenu
+- CharacterGenerateMenu
+- CharacterListMenu
+- StatisticModifyMenu
+- CharacterCompareMenu
 
 ## Models
-- Character model
-- User model
+- MyCharacter
+- User
 
 ## Services
-- CharacterService
+- MyCharacterService
 - UserService
 
 ## Util
 - AppState
-- Collection
+- Collection abstract class
 - ArrayList
 - MenuRouter
-
