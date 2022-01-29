@@ -1,6 +1,6 @@
 package com.revature.phil_wentworth.util;
 
-public class MyArrayList<T> implements Collection<T> {
+public class MyArrayList<T> implements MyList<T> {
 	private int maxSize;
 	private int currentSize;
 	private T[] elements;
@@ -78,6 +78,7 @@ public class MyArrayList<T> implements Collection<T> {
 		return this.currentSize;
 	}
 	
+	@Override
 	public T get(int index) {
 		return elements[index];
 	}

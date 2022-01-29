@@ -14,8 +14,8 @@
 - EmailAlreadyExistsException
 
 ## Menus
-- Menu abstract class (getName, getRoute, render)
-- WelcomeMenu
+- DONE Menu abstract class (getName, getRoute, render)
+- DONE WelcomeMenu
 - UserRegisterMenu
 - UserLoginMenu
 - CharacterGenerateMenu
@@ -34,7 +34,8 @@
 - UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid, isStatisticValid)
 
 ## Util
-- AppState (public void startup, public static void shutdown)
+- DONE AppState (public void startup, public static void shutdown)
 - DONE Collection interface (add, contains, isEmpty, remove(element), size)
-- DONE ArrayList implements Collection (get)
-- MenuRouter (addMenu, transfer)
+- DONE MyList interface (get)
+- DONE MyArrayList implements List
+- DONE MenuRouter (addMenu, transfer)
