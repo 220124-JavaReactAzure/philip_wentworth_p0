@@ -6,12 +6,12 @@
 - UserDAO
 
 ## Exceptions
-- InvalidStatisticValueException
-- InvalidCharacterNameException
-- InvalidUsernameException
-- InvalidEmailException
-- UsernameAlreadyExistsException
-- EmailAlreadyExistsException
+- DONE InvalidStatisticValueException
+- DONE InvalidCharacterNameException
+- DONE InvalidUsernameException
+- DONE InvalidEmailException
+- DONE UsernameAlreadyExistsException
+- DONE EmailAlreadyExistsException
 
 ## Menus
 - DONE Menu abstract class (getName, getRoute, render)
