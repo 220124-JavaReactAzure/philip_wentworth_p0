@@ -27,7 +27,7 @@ public class MyArrayList<T> implements MyList<T> {
 	@SuppressWarnings("unchecked")
 	@Override
 	public boolean add(T element) {
-		if (currentSize > maxSize * .75 || currentSize == 1) {
+		if (currentSize >= maxSize) {
 			maxSize *= 2;
 			T[] biggerArray = (T[]) new Object[maxSize];
 			for (int i=0; i<currentSize; i++) {
