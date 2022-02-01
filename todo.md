@@ -29,7 +29,7 @@
 - DONE User (id, userName, password, email)
 
 ## Services
-- PROGRESS MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticsLine)
+- DONE MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticsLine)
 - UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid, isStatisticValid)
 
 ## Util

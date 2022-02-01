@@ -1,5 +1,7 @@
 package com.revature.phil_wentworth.services;
 
+import com.revature.phil_wentworth.exceptions.InvalidCharacterNameException;
+import com.revature.phil_wentworth.exceptions.InvalidStatisticException;
 import com.revature.phil_wentworth.models.MyCharacter;
 
 /*
@@ -9,45 +11,85 @@ import com.revature.phil_wentworth.models.MyCharacter;
 public class MyCharacterService {
 	public static int nextCharacterID = 0;
 	
+	// TODO
 	// Load all MyCharacter objects from DAO so that nextCharacterID can be set appropriately
 	static {
 		
 	}
 	
-	// done
-	public MyCharacter generateMyCharacter(int userID, String characterName) {
+	public MyCharacter generateMyCharacter(int userID, String characterName) throws InvalidCharacterNameException {
+		if (!isCharacterNameValid(characterName)) {
+			throw new InvalidCharacterNameException("Character names can only contain letters and spaces.");
+		}
+		int[] stats = new int[6];
+		for (int i=0; i<stats.length; i++) {
+			stats[i] = rollStatistic();
+		}
 		MyCharacter c = new MyCharacter(nextCharacterID, userID, characterName);
+		c.setStatistics(stats);
 		nextCharacterID++;
 		return c;
 	}
 	
-	public boolean dumpStatistic(MyCharacter c, int fromID, int toID, int value) {
-		return false;
+	public void dumpStatistic(MyCharacter c, int fromID, int toID, int value) throws InvalidStatisticException {
+		if (value<0) {
+			throw new InvalidStatisticException("Minimum dump value is 1.");
+		}
+		
+		String[] statNames = MyCharacter.getStatisticNames();
+		
+		int newFromValue = c.getStatistic(fromID) - value;
+		if (!isStatisticValid(newFromValue)) {
+			throw new InvalidStatisticException(statNames[fromID] + " ends up too low, try dumping fewer points.");
+		}
+		
+		int newToValue = c.getStatistic(toID) + value;
+		if (!isStatisticValid(newToValue)) {
+			throw new InvalidStatisticException(statNames[toID] + " ends up too high, try dumping fewer points.");
+		}
+		
+		c.setStatistic(fromID, newFromValue);
+		c.setStatistic(toID, newToValue);
 	}
+
 	
-	// done
-	public void compareMyCharacters(MyCharacter a, MyCharacter b) {
+	public boolean compareMyCharacters(MyCharacter a, MyCharacter b) {
 		int[] statsA = a.getStatistics();
 		int[] statsB = b.getStatistics();
+		String[] statNames = MyCharacter.getStatisticNames();
 		for (int i=0; i<statsA.length; i++) {
 			if (statsA[i] == statsB[i]) {
-				System.out.println(a.getCharacterName() + " is equal to " + b.getCharacterName() + " in " + MyCharacter.statisticNames[i]);
+				System.out.println(a.getCharacterName() + " is equal to " + b.getCharacterName() + " in " + statNames[i]);
 			}
 			else if (statsA[i] > statsB[i]) {
-				System.out.println(a.getCharacterName() + " is greater than " + b.getCharacterName() + " in " + MyCharacter.statisticNames[i]);
+				System.out.println(a.getCharacterName() + " is greater than " + b.getCharacterName() + " in " + statNames[i]);
 			}
 			else {
-				System.out.println(b.getCharacterName() + " is greater than " + a.getCharacterName() + " in " + MyCharacter.statisticNames[i]);
+				System.out.println(b.getCharacterName() + " is greater than " + a.getCharacterName() + " in " + statNames[i]);
 			}
 		}
-	}
-	
-	public boolean isCharacterNameValid(String characterName) {
 		return true;
 	}
 	
+	public boolean isCharacterNameValid (String characterName){
+		char[] letters = characterName.toCharArray();
+		
+		for (int i=0; i<letters.length; i++) {
+			if (! ((letters[i] >= 'A' && letters[i] <= 'Z') || (letters[i] >= 'a' && letters[i] <= 'z') || letters[i]==' ') ) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public int roll(int sides) {
+		int result = (int) (Math.random() * sides) + 1;
+		return result;
+	}
+	
 	public int rollStatistic() {
-		return 0;
+		return roll(6) + roll(6) + roll(6);
 	}
 	
 	public boolean isStatisticValid(int statistic) {
@@ -57,7 +99,6 @@ public class MyCharacterService {
 		return false;
 	}
 	
-	// done
 	public void printCharacterStatisticLine(MyCharacter c) {
 		int[] stats = c.getStatistics();
 		for (int i=0; i<stats.length; i++) {

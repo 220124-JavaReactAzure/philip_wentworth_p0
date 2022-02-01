@@ -1,8 +1,8 @@
 package com.revature.phil_wentworth.models;
 
 public class MyCharacter {
-	public static final String[] statisticNames = {"Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"};
-	public static final String[] statisticAbbreviations = {"STR","DEX","CON","INT","WIS","CHA"};
+	private static final String[] statisticNames = {"Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"};
+	private static final String[] statisticAbbreviations = {"STR","DEX","CON","INT","WIS","CHA"};
 	private int[] statistics;
 	private int id;
 	private int userID;
@@ -21,6 +21,14 @@ public class MyCharacter {
 	
 	public void setStatistics(int[] statistics) {
 		this.statistics = statistics;
+	}
+	
+	public int getStatistic(int stat) {
+		return statistics[stat];
+	}
+	
+	public void setStatistic(int stat, int value) {
+		statistics[stat] = value;
 	}
 	
 	public int getId() {
@@ -43,6 +51,14 @@ public class MyCharacter {
 		return characterName;
 	}
 	
+	public static String[] getStatisticNames() {
+		return statisticNames;
+	}
+
+	public static String[] getStatisticAbbreviations() {
+		return statisticAbbreviations;
+	}
+
 	public void setCharacterName(String characterName) {
 		this.characterName = characterName;
 	}
