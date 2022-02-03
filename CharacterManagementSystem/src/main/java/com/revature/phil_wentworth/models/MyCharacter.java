@@ -8,6 +8,10 @@ public class MyCharacter {
 	private int userID;
 	private String characterName;
 	
+	public MyCharacter() {
+		
+	}
+	
 	public MyCharacter(int id, int userID, String characterName) {
 		this.id = id;
 		this.userID = userID;

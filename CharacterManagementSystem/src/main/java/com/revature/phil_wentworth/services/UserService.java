@@ -3,6 +3,7 @@ package com.revature.phil_wentworth.services;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.revature.phil_wentworth.daos.UserDAO;
 import com.revature.phil_wentworth.exceptions.EmailAlreadyExistsException;
 import com.revature.phil_wentworth.exceptions.InvalidEmailException;
 import com.revature.phil_wentworth.exceptions.InvalidUsernameException;
@@ -10,17 +11,26 @@ import com.revature.phil_wentworth.exceptions.UsernameAlreadyExistsException;
 import com.revature.phil_wentworth.models.User;
 
 public class UserService {
+	
+	private UserDAO userDao = new UserDAO();
 	//TODO
-	public User registerNewUser(String username, String email) {
-		return null;
+	public User registerNewUser(String email, String username, String password) {
+		try {
+			isUserValid(email,username);
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		User newUser = new User(email, username, password);
+		return userDao.create(newUser);
 	}
 
 	//TODO
-	public User authenticateUser() {
-		return null;
+	public User authenticateUser(String username, String password) {
+		return userDao.findByUsernameAndPassword(username, password);
 	}
 
-	public boolean isUserValid(String username, String email) throws EmailAlreadyExistsException, InvalidEmailException, InvalidUsernameException, UsernameAlreadyExistsException {
+	public boolean isUserValid(String email, String username) throws EmailAlreadyExistsException, InvalidEmailException, InvalidUsernameException, UsernameAlreadyExistsException {
 		if (!isUsernameValid(username)) {
 			throw new InvalidUsernameException("Usernames can only contain letters and the underscore character.");
 		}
