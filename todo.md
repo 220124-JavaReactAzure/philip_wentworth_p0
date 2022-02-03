@@ -16,9 +16,9 @@
 ## Menus
 - DONE Menu abstract class (getName, getRoute, render)
 - DONE WelcomeMenu
-- PARTIAL UserRegisterMenu (userService)
-- PARTIAL UserLoginMenu (userService)
-- PARTIAL UserDashboardMenu (userService)
+- DONE UserRegisterMenu (userService)
+- DONE UserLoginMenu (userService)
+- DONE UserDashboardMenu (userService)
 - PARTIAL CharacterGenerateMenu (myCharacterService)
 - PARTIAL CharacterListMenu (myCharacterService)
 - PARTIAL CharacterModifyMenu (myCharacterService)
