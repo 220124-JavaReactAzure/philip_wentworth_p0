@@ -11,6 +11,7 @@ public class CharacterModifyMenu extends Menu {
 	
 	public CharacterModifyMenu(BufferedReader consoleReader, MenuRouter router, MyCharacterService myCharacterService) {
 		super("Character Modify","/character_modify", consoleReader, router);
+		this.myCharacterService = myCharacterService;
 	}
 
 	@Override
