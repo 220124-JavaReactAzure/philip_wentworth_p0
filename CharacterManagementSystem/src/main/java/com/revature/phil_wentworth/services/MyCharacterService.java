@@ -11,6 +11,9 @@ public class MyCharacterService {
 	private UserService userService;
 	private MyCharacterDAO myCharacterDAO;
 	private MyArrayList<MyCharacter> activeCharacters;
+	private static final int min_dump_stat = 9;
+	private static final int min_stat = 3;
+	private static final int max_stat = 18;
 	
 	public MyCharacterService(MyCharacterDAO myCharacterDAO, UserService userService) {
 		this.myCharacterDAO = myCharacterDAO;
@@ -46,13 +49,13 @@ public class MyCharacterService {
 		String[] statNames = MyCharacter.getStatisticNames();
 		
 		int newFromValue = c.getStatistic(fromID) - value;
-		if (!isStatisticValid(newFromValue)) {
-			throw new InvalidStatisticException(statNames[fromID] + " ends up too low, try dumping fewer points.");
+		if ( (!isStatisticValid(newFromValue)) || newFromValue<min_dump_stat ) {
+			throw new InvalidStatisticException(statNames[fromID] + " ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than " + min_dump_stat + ".");
 		}
 		
 		int newToValue = c.getStatistic(toID) + value;
 		if (!isStatisticValid(newToValue)) {
-			throw new InvalidStatisticException(statNames[toID] + " ends up too high, try dumping fewer points.");
+			throw new InvalidStatisticException(statNames[toID] + " ends up too high, try dumping fewer points. You cannot pump a stat so that its new value is above" + max_stat + ".");
 		}
 		
 		c.setStatistic(fromID, newFromValue);
@@ -103,7 +106,7 @@ public class MyCharacterService {
 	}
 	
 	public boolean isStatisticValid(int statistic) {
-		if (statistic >= 3 && statistic <= 18) {
+		if (statistic >= min_stat && max_stat <= 18) {
 			return true;
 		}
 		return false;
