@@ -11,6 +11,7 @@ public class CharacterCompareMenu extends Menu {
 
 	public CharacterCompareMenu(BufferedReader consoleReader, MenuRouter router, MyCharacterService myCharacterService) {
 		super("Character Compare","/character_compare", consoleReader, router);
+		this.myCharacterService = myCharacterService;
 	}
 
 	@Override
