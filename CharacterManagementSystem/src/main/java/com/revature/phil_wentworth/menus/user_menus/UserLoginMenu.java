@@ -17,8 +17,16 @@ UserService userService;
 
 	@Override
 	public void render() throws Exception {
-		// TODO Auto-generated method stub
-		
+		System.out.println("Username: ");
+		String username = consoleReader.readLine();
+		System.out.println("Password: ");
+		String password = consoleReader.readLine();
+		if ( userService.authenticateUser(username, password) != null ) {
+			System.out.println("Welcome, "+username);
+		}
+		else {
+			System.out.println("Login Failed.");
+		}
 	}
 
 }
