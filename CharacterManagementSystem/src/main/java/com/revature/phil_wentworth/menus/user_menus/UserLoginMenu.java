@@ -23,6 +23,7 @@ UserService userService;
 		String password = consoleReader.readLine();
 		if ( userService.authenticateUser(username, password) != null ) {
 			System.out.println("Welcome, "+username);
+			router.transfer("/user_dashboard");
 		}
 		else {
 			System.out.println("Login Failed.");
