@@ -13,6 +13,12 @@ import com.revature.phil_wentworth.models.User;
 public class UserService {
 	
 	private UserDAO userDao = new UserDAO();
+	private User sessionUser;
+	
+	public UserService(UserDAO userDao) {
+		this.userDao = userDao;
+		sessionUser = null;
+	}
 
 	public User registerNewUser(String email, String username, String password) {
 		try {
@@ -26,7 +32,12 @@ public class UserService {
 	}
 
 	public User authenticateUser(String username, String password) {
-		return userDao.findByUsernameAndPassword(username, password);
+		sessionUser = userDao.findByUsernameAndPassword(username, password);
+		return sessionUser;
+	}
+	
+	public User getSessionUser() {
+		return sessionUser;
 	}
 
 	public boolean isUserValid(String email, String username) throws EmailAlreadyExistsException, InvalidEmailException, InvalidUsernameException, UsernameAlreadyExistsException {
@@ -81,5 +92,9 @@ public class UserService {
 	    } else {
 	      return false;
 	    }
+	}
+	
+	public void logout() {
+		sessionUser = null;
 	}
 }

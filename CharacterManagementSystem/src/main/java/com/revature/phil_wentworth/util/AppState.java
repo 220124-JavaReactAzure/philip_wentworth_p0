@@ -3,7 +3,11 @@ package com.revature.phil_wentworth.util;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import com.revature.phil_wentworth.daos.MyCharacterDAO;
+import com.revature.phil_wentworth.daos.UserDAO;
 import com.revature.phil_wentworth.menus.WelcomeMenu;
+import com.revature.phil_wentworth.services.MyCharacterService;
+import com.revature.phil_wentworth.services.UserService;
 
 public class AppState {
 
@@ -14,6 +18,13 @@ public class AppState {
 		isRunning = true;
 		router = new MenuRouter();
 		BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
+		
+		UserDAO userDAO = new UserDAO();
+		UserService userService = new UserService(userDAO);
+		
+		MyCharacterDAO myCharacterDAO = new MyCharacterDAO();
+		MyCharacterService myCharacterService = new MyCharacterService(myCharacterDAO, userService);
+		
 		router.addMenu(new WelcomeMenu(consoleReader, router));
 	}
 	

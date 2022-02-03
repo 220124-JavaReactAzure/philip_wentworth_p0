@@ -16,20 +16,20 @@
 ## Menus
 - DONE Menu abstract class (getName, getRoute, render)
 - DONE WelcomeMenu
-- UserRegisterMenu
-- UserLoginMenu
-- UserDashboardMenu
-- CharacterGenerateMenu
-- CharacterListMenu
-- StatisticModifyMenu
-- CharacterCompareMenu
+- UserRegisterMenu (userService)
+- UserLoginMenu (userService)
+- UserDashboardMenu (userService)
+- CharacterGenerateMenu (myCharacterService)
+- CharacterListMenu (myCharacterService)
+- StatisticModifyMenu (myCharacterService)
+- CharacterCompareMenu (myCharacterService)
 
 ## Models
 - DONE MyCharacter (id, characterName, statistics[], userID)
 - DONE User (userName, password, email)
 
 ## Services
-- PARTIAL MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticLine)
+- DONE MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticLine)
 - DONE UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid)
 
 ## Util

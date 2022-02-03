@@ -4,14 +4,21 @@ import com.revature.phil_wentworth.daos.MyCharacterDAO;
 import com.revature.phil_wentworth.exceptions.InvalidCharacterNameException;
 import com.revature.phil_wentworth.exceptions.InvalidStatisticException;
 import com.revature.phil_wentworth.models.MyCharacter;
-import com.revature.phil_wentworth.models.User;
-import com.revature.phil_wentworth.util.MyList;
+import com.revature.phil_wentworth.util.MyArrayList;
 
 public class MyCharacterService {
 	
-	private MyCharacterDAO myCharacterDAO = new MyCharacterDAO();
+	private UserService userService;
+	private MyCharacterDAO myCharacterDAO;
+	private MyArrayList<MyCharacter> activeCharacters;
 	
-	public MyCharacter generateMyCharacter(String userEmail, String characterName) throws InvalidCharacterNameException {
+	public MyCharacterService(MyCharacterDAO myCharacterDAO, UserService userService) {
+		this.myCharacterDAO = myCharacterDAO;
+		this.userService = userService;
+	}
+	
+	public MyCharacter generateMyCharacter(String characterName) throws InvalidCharacterNameException {
+		String userEmail = userService.getSessionUser().getEmail();
 		if (!isCharacterNameValid(characterName)) {
 			throw new InvalidCharacterNameException("Character names can only contain letters and spaces.");
 		}
@@ -25,8 +32,10 @@ public class MyCharacterService {
 		return c;
 	}
 	
-	public MyList<MyCharacter> getCharactersForUser(User user) {
-		return myCharacterDAO.getMyCharactersByEmail(user.getEmail());
+	public MyArrayList<MyCharacter> getCharactersForUser() {
+		String userEmail = userService.getSessionUser().getEmail();
+		activeCharacters = (MyArrayList<MyCharacter>) myCharacterDAO.getMyCharactersByEmail(userEmail);
+		return activeCharacters;
 	}
 	
 	public void dumpStatistic(MyCharacter c, int fromID, int toID, int value) throws InvalidStatisticException {
@@ -106,5 +115,10 @@ public class MyCharacterService {
 			System.out.print(stats[i] + "\t");
 		}
 		System.out.print("\n");
+	}
+	
+	public void logout() {
+		activeCharacters = null;
+		userService.logout();
 	}
 }

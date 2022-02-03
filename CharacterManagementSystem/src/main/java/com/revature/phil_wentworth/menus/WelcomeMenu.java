@@ -9,7 +9,6 @@ public class WelcomeMenu extends Menu{
 
 	public WelcomeMenu(BufferedReader consoleReader, MenuRouter router) {
 		super("Welcome", "/welcome", consoleReader, router);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
