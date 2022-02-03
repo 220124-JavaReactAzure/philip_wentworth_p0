@@ -13,7 +13,7 @@ import com.revature.phil_wentworth.models.User;
 public class UserService {
 	
 	private UserDAO userDao = new UserDAO();
-	//TODO
+
 	public User registerNewUser(String email, String username, String password) {
 		try {
 			isUserValid(email,username);
@@ -25,7 +25,6 @@ public class UserService {
 		return userDao.create(newUser);
 	}
 
-	//TODO
 	public User authenticateUser(String username, String password) {
 		return userDao.findByUsernameAndPassword(username, password);
 	}
@@ -46,9 +45,11 @@ public class UserService {
 		return true;
 	}
 	
-	//TODO
 	public boolean doesUsernameExist(String username) {
-		return false;
+		if (userDao.findByUsername(username)==null) {
+			return false;
+		}
+		return true;
 	}
 
 	public boolean isUsernameValid(String username) {
@@ -64,9 +65,11 @@ public class UserService {
 		return true;
 	}
 	
-	//TODO
 	public boolean doesEmailExist(String email) {
-		return false;
+		if (userDao.findById(email)==null) {
+			return false;
+		}
+		return true;
 	}
 
 	public boolean isEmailValid(String userEmail) {

@@ -3,7 +3,7 @@
 ## DAOS
 - DONE CrudDAO abstract class
 - CharacterDAO
-- UserDAO
+- DONE UserDAO
 
 ## Exceptions
 - DONE InvalidStatisticValueException
@@ -29,8 +29,8 @@
 - DONE User (id, userName, password, email)
 
 ## Services
-- PARTIAL MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticLine)
-- PARTIAL UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid)
+- DONE MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticLine)
+- DONE UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid)
 
 ## Util
 - DONE AppState (public void startup, public static void shutdown)
