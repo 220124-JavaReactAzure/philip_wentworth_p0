@@ -1,12 +1,17 @@
 package com.revature.phil_wentworth.services;
 
+import com.revature.phil_wentworth.daos.MyCharacterDAO;
 import com.revature.phil_wentworth.exceptions.InvalidCharacterNameException;
 import com.revature.phil_wentworth.exceptions.InvalidStatisticException;
 import com.revature.phil_wentworth.models.MyCharacter;
+import com.revature.phil_wentworth.models.User;
+import com.revature.phil_wentworth.util.MyList;
 
 public class MyCharacterService {
 	
-	public MyCharacter generateMyCharacter(int userID, String characterName) throws InvalidCharacterNameException {
+	private MyCharacterDAO myCharacterDAO = new MyCharacterDAO();
+	
+	public MyCharacter generateMyCharacter(String userEmail, String characterName) throws InvalidCharacterNameException {
 		if (!isCharacterNameValid(characterName)) {
 			throw new InvalidCharacterNameException("Character names can only contain letters and spaces.");
 		}
@@ -14,9 +19,13 @@ public class MyCharacterService {
 		for (int i=0; i<stats.length; i++) {
 			stats[i] = rollStatistic();
 		}
-		MyCharacter c = new MyCharacter(0, userID, characterName);
+		MyCharacter c = new MyCharacter(0, userEmail, characterName);
 		c.setStatistics(stats);
 		return c;
+	}
+	
+	public MyList<MyCharacter> getCharactersForUser(User user) {
+		return null;
 	}
 	
 	public void dumpStatistic(MyCharacter c, int fromID, int toID, int value) throws InvalidStatisticException {

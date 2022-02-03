@@ -2,7 +2,7 @@
 
 ## DAOS
 - DONE CrudDAO abstract class
-- CharacterDAO
+- DONE CharacterDAO
 - DONE UserDAO
 
 ## Exceptions
@@ -26,10 +26,10 @@
 
 ## Models
 - DONE MyCharacter (id, characterName, statistics[], userID)
-- DONE User (id, userName, password, email)
+- DONE User (userName, password, email)
 
 ## Services
-- DONE MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticLine)
+- PARTIAL MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticLine)
 - DONE UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid)
 
 ## Util

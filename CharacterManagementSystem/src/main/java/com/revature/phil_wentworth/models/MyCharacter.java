@@ -5,23 +5,23 @@ public class MyCharacter {
 	private static final String[] statisticAbbreviations = {"STR","DEX","CON","INT","WIS","CHA"};
 	private int[] statistics;
 	private int id;
-	private int userID;
+	private String userEmail;
 	private String characterName;
 	
 	public MyCharacter() {
 		
 	}
 	
-	public MyCharacter(int id, int userID, String characterName) {
+	public MyCharacter(int id, String userEmail, String characterName) {
 		this.id = id;
-		this.userID = userID;
+		this.userEmail = userEmail;
 		this.characterName = characterName;
 		this.statistics = new int[6];
 	}
 	
-	public MyCharacter(int id, int userID, String characterName, int[] statistics) {
+	public MyCharacter(int id, String userEmail, String characterName, int[] statistics) {
 		this.id = id;
-		this.userID = userID;
+		this.userEmail = userEmail;
 		this.characterName = characterName;
 		this.statistics = statistics;
 	}
@@ -50,12 +50,12 @@ public class MyCharacter {
 		this.id = id;
 	}
 	
-	public int getUserID() {
-		return userID;
+	public String getUserEmail() {
+		return userEmail;
 	}
 	
-	public void setUserID(int userID) {
-		this.userID = userID;
+	public void setUserEmail(String userID) {
+		this.userEmail = userID;
 	}
 	
 	public String getCharacterName() {
