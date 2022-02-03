@@ -1,7 +1,7 @@
 # TODO
 
 ## DAOS
-- CrudDAO abstract class
+- DONE CrudDAO abstract class
 - CharacterDAO
 - UserDAO
 
@@ -29,8 +29,8 @@
 - DONE User (id, userName, password, email)
 
 ## Services
-- DONE MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticsLine)
-- UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid, isStatisticValid)
+- PARTIAL MyCharacterService (generateMyCharacter, dumpStatistic, compareMyCharacters, isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticLine)
+- PARTIAL UserService (registerNewUser, authenticateUser, isUserValid, isUsernameValid, isEmailValid)
 
 ## Util
 - DONE AppState (public void startup, public static void shutdown)

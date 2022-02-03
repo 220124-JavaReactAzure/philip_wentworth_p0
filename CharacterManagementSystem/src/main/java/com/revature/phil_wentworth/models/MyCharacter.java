@@ -15,6 +15,13 @@ public class MyCharacter {
 		this.statistics = new int[6];
 	}
 	
+	public MyCharacter(int id, int userID, String characterName, int[] statistics) {
+		this.id = id;
+		this.userID = userID;
+		this.characterName = characterName;
+		this.statistics = statistics;
+	}
+	
 	public int[] getStatistics() {
 		return statistics;
 	}

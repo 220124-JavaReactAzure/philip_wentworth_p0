@@ -1,24 +1,14 @@
 package com.revature.phil_wentworth.models;
 
 public class User {
-	private int id;
 	private String email;
 	private String username;
 	private String password;
 	
-	public User(int id, String email, String username, String password) {
-		this.id = id;
+	public User(String email, String username, String password) {
 		this.email = email;
 		this.username = username;
 		this.password = password;
-	}
-	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
 	}
 	
 	public String getEmail() {
@@ -47,7 +37,7 @@ public class User {
 	
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", username=" + username + "]";
+		return "User [email=" + email + ", username=" + username + "]";
 	}
 
 }

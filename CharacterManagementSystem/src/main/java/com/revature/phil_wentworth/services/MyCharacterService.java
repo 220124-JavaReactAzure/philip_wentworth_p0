@@ -4,18 +4,7 @@ import com.revature.phil_wentworth.exceptions.InvalidCharacterNameException;
 import com.revature.phil_wentworth.exceptions.InvalidStatisticException;
 import com.revature.phil_wentworth.models.MyCharacter;
 
-/*
- * generateMyCharacter, dumpStatistic, compareMyCharacters, 
- * isCharacterNameValid, rollStatistic, isStatisticValid, printCharacterStatisticsLine
- * */
 public class MyCharacterService {
-	public static int nextCharacterID = 0;
-	
-	// TODO
-	// Load all MyCharacter objects from DAO so that nextCharacterID can be set appropriately
-	static {
-		
-	}
 	
 	public MyCharacter generateMyCharacter(int userID, String characterName) throws InvalidCharacterNameException {
 		if (!isCharacterNameValid(characterName)) {
@@ -25,9 +14,8 @@ public class MyCharacterService {
 		for (int i=0; i<stats.length; i++) {
 			stats[i] = rollStatistic();
 		}
-		MyCharacter c = new MyCharacter(nextCharacterID, userID, characterName);
+		MyCharacter c = new MyCharacter(0, userID, characterName);
 		c.setStatistics(stats);
-		nextCharacterID++;
 		return c;
 	}
 	
