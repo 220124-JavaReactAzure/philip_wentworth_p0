@@ -157,7 +157,6 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 			ps.setInt(5, stats[2]);
 			ps.setInt(6, stats[3]);
 			ps.setInt(7, stats[4]);
-			;
 			ps.setInt(8, stats[5]);
 			ps.setInt(9, updatedObj.getId());
 

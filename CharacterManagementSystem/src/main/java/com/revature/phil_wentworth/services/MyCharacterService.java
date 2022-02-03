@@ -21,11 +21,12 @@ public class MyCharacterService {
 		}
 		MyCharacter c = new MyCharacter(0, userEmail, characterName);
 		c.setStatistics(stats);
+		myCharacterDAO.create(c);
 		return c;
 	}
 	
 	public MyList<MyCharacter> getCharactersForUser(User user) {
-		return null;
+		return myCharacterDAO.getMyCharactersByEmail(user.getEmail());
 	}
 	
 	public void dumpStatistic(MyCharacter c, int fromID, int toID, int value) throws InvalidStatisticException {
@@ -47,6 +48,9 @@ public class MyCharacterService {
 		
 		c.setStatistic(fromID, newFromValue);
 		c.setStatistic(toID, newToValue);
+		myCharacterDAO.update(c);
+		
+		System.out.println("Moved " + value + " points from " + statNames[fromID] + " to " + statNames[toID]);
 	}
 
 	
