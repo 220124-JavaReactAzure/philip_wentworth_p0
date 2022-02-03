@@ -26,10 +26,10 @@ public class WelcomeMenu extends Menu{
 
 		switch (userSelection) {
 		case "1":
-			router.transfer("/login");
+			router.transfer("/user_login");
 			break;
 		case "2":
-			router.transfer("/register");
+			router.transfer("/user_register");
 			break;
 		case "3":
 			shutdown();

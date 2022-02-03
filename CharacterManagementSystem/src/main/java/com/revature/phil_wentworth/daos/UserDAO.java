@@ -74,7 +74,7 @@ public class UserDAO implements CrudDAO<User> {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, id);
 
-			ResultSet resultSet = ps.executeQuery(sql);
+			ResultSet resultSet = ps.executeQuery();
 
 			while (resultSet.next()) {
 				User user = new User();
@@ -95,7 +95,7 @@ public class UserDAO implements CrudDAO<User> {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, username);
 
-			ResultSet resultSet = ps.executeQuery(sql);
+			ResultSet resultSet = ps.executeQuery();
 
 			while (resultSet.next()) {
 				User user = new User();
@@ -117,7 +117,7 @@ public class UserDAO implements CrudDAO<User> {
 			ps.setString(1, username);
 			ps.setString(2, password);
 
-			ResultSet resultSet = ps.executeQuery(sql);
+			ResultSet resultSet = ps.executeQuery();
 
 			while (resultSet.next()) {
 				User user = new User();

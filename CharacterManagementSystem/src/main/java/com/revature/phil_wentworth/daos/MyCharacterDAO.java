@@ -87,7 +87,7 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, id);
 
-			ResultSet resultSet = ps.executeQuery(sql);
+			ResultSet resultSet = ps.executeQuery();
 
 			while (resultSet.next()) {
 				MyCharacter c = new MyCharacter();
@@ -119,7 +119,7 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, id);
 
-			ResultSet resultSet = ps.executeQuery(sql);
+			ResultSet resultSet = ps.executeQuery();
 
 			while (resultSet.next()) {
 				MyCharacter c = new MyCharacter();

@@ -7,18 +7,61 @@ import com.revature.phil_wentworth.services.UserService;
 import com.revature.phil_wentworth.util.MenuRouter;
 
 public class UserRegisterMenu extends Menu {
-	
+
 	UserService userService;
-	
+
 	public UserRegisterMenu(BufferedReader consoleReader, MenuRouter router, UserService userService) {
-		super("User Register","/user_register", consoleReader, router);
+		super("User Register", "/user_register", consoleReader, router);
 		this.userService = userService;
 	}
 
 	@Override
 	public void render() throws Exception {
-		// TODO Auto-generated method stub
+		String email = null;
+		String username = null;
+		String password = null;
+		String userSelection;
+
+		do {
+			System.out.println("Enter your Email: ");
+			userSelection = consoleReader.readLine();
+			if (userService.isEmailValid(userSelection)) {
+				if (userService.doesEmailExist(userSelection)) {
+					System.out.println(userSelection + " is already registered.");
+				}
+				else {
+					email = userSelection;
+				}
+			} else {
+				System.out.println(userSelection + " is not a valid email.");
+			}
+		} while (email == null);
 		
+		do {
+			System.out.println("Choose your Username: ");
+			userSelection = consoleReader.readLine();
+			if (userService.isUsernameValid(userSelection)) {
+				if (userService.doesUsernameExist(userSelection)) {
+					System.out.println(userSelection + " is already registered.");
+				}
+				else {
+					username = userSelection;
+				}
+			}
+			else {
+				System.out.println(userSelection + " is not a valid username. A-Z, a-z, and _ only.");
+			}
+		} while (username == null);
+		
+		System.out.println("Choose your Password: ");
+		password = consoleReader.readLine();
+		
+		if (userService.registerNewUser(email, username, password) != null) {
+			System.out.println("Successfully registered " + email + " as " + username + ". You can now login with the password you chose.");
+		}
+		else {
+			System.out.println("Registration failed.");
+		}
 	}
 
 }
