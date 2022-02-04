@@ -75,10 +75,10 @@ public class MyCharacterService {
 				System.out.println(a.getCharacterName() + " is equal to " + b.getCharacterName() + " in " + statNames[i]);
 			}
 			else if (statsA[i] > statsB[i]) {
-				System.out.println(a.getCharacterName() + " is greater than " + b.getCharacterName() + " in " + statNames[i]);
+				System.out.println(a.getCharacterName() + " is greater than " + b.getCharacterName() + " in " + statNames[i] + " by " + (statsA[i] - statsB[i]));
 			}
 			else {
-				System.out.println(b.getCharacterName() + " is greater than " + a.getCharacterName() + " in " + statNames[i]);
+				System.out.println(b.getCharacterName() + " is greater than " + a.getCharacterName() + " in " + statNames[i] + " by " + (statsB[i] - statsA[i]));
 			}
 		}
 		return true;
