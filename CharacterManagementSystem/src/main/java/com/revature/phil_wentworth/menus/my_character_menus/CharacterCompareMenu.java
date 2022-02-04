@@ -3,20 +3,54 @@ package com.revature.phil_wentworth.menus.my_character_menus;
 import java.io.BufferedReader;
 
 import com.revature.phil_wentworth.menus.Menu;
+import com.revature.phil_wentworth.models.MyCharacter;
 import com.revature.phil_wentworth.services.MyCharacterService;
 import com.revature.phil_wentworth.util.MenuRouter;
+import com.revature.phil_wentworth.util.MyArrayList;
 
 public class CharacterCompareMenu extends Menu {
 	MyCharacterService myCharacterService;
 
-	public CharacterCompareMenu(BufferedReader consoleReader, MenuRouter router, MyCharacterService myCharacterService) {
-		super("Character Compare","/character_compare", consoleReader, router);
+	public CharacterCompareMenu(BufferedReader consoleReader, MenuRouter router,
+			MyCharacterService myCharacterService) {
+		super("Character Compare", "/character_compare", consoleReader, router);
 		this.myCharacterService = myCharacterService;
 	}
 
 	@Override
 	public void render() throws Exception {
-		// TODO Auto-generated method stub
+		MyArrayList<MyCharacter> characters = myCharacterService.getCharactersForUser();
 
+		System.out.println("Enter a Character Number from above: ");
+		String userSelection = consoleReader.readLine();
+		int choice_a = Integer.valueOf(userSelection);
+
+		if (choice_a < 0 || choice_a >= characters.size()) {
+			System.out.println("Invalid Character Number. Must be between 0 and " + (characters.size() - 1));
+			router.transfer("/user_dashboard");
+			return;
+		}
+
+		MyCharacter a = characters.get(choice_a);
+		
+		System.out.println("Enter a different Character Number from above: ");
+		userSelection = consoleReader.readLine();
+		int choice_b = Integer.valueOf(userSelection);
+
+		if (choice_b < 0 || choice_b >= characters.size()) {
+			System.out.println("Invalid Character Number. Must be between 0 and " + (characters.size() - 1));
+			router.transfer("/user_dashboard");
+			return;
+		}
+		else if (choice_b == choice_a) {
+			System.out.println("Cannot compare character to same character.");
+			router.transfer("/user_dashboard");
+			return;
+		}
+
+		MyCharacter b = characters.get(choice_b);
+		
+		myCharacterService.compareMyCharacters(a, b);
+		router.transfer("/user_dashboard");
 	}
 }

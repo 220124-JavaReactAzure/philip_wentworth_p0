@@ -17,7 +17,7 @@ public class UserDashboardMenu extends Menu {
 	@Override
 	public void render() throws Exception {
 		StringBuilder menuChoices = new StringBuilder(
-				"You are logged in as " + userService.getSessionUser().getUsername() + "\n");
+				userService.getSessionUser().getUsername() + " Dashboard: \n");
 
 		menuChoices.append("1. Generate Character\n");
 		menuChoices.append("2. View My Characters\n");
