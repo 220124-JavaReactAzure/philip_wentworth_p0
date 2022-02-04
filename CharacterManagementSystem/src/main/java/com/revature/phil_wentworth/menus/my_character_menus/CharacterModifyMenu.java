@@ -63,7 +63,7 @@ public class CharacterModifyMenu extends Menu {
 			return;
 		}
 		
-		System.out.println("How many points?");
+		System.out.println("How many points would you like to move from " + statNames[fromStat] + " to " + statNames[toStat] + "?");
 		userSelection = consoleReader.readLine();
 		value = Integer.valueOf(userSelection);
 		
