@@ -18,6 +18,8 @@ public class CharacterListMenu extends Menu {
 
 	@Override
 	public void render() throws Exception {
+		logger.log("Rendering CharacterListMenu");
+		
 		MyArrayList<MyCharacter> characters = myCharacterService.getCharactersForUser();
 		for (int i=0; i<characters.size(); i++) {
 			System.out.print("\nCharacter " + i + ": " + characters.get(i) + "\n");
@@ -35,6 +37,7 @@ public class CharacterListMenu extends Menu {
 			System.out.print(menuChoices);
 
 			String userSelection = consoleReader.readLine();
+			logger.log("User selected " + userSelection + " within CharacterListMenu ");
 
 			switch (userSelection) {
 			case "1":

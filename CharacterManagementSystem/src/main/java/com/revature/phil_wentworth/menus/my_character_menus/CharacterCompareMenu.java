@@ -19,10 +19,14 @@ public class CharacterCompareMenu extends Menu {
 
 	@Override
 	public void render() throws Exception {
+		logger.log("Rendering CharacterCompareMenu");
+		
 		MyArrayList<MyCharacter> characters = myCharacterService.getCharactersForUser();
 
 		System.out.println("Enter a Character Number from above: ");
 		String userSelection = consoleReader.readLine();
+		logger.log("User entered " + userSelection + " for choice a");
+		
 		int choice_a = Integer.valueOf(userSelection);
 
 		if (choice_a < 0 || choice_a >= characters.size()) {
@@ -35,6 +39,8 @@ public class CharacterCompareMenu extends Menu {
 		
 		System.out.println("Enter a different Character Number from above: ");
 		userSelection = consoleReader.readLine();
+		logger.log("User entered " + userSelection + " for choice b");
+		
 		int choice_b = Integer.valueOf(userSelection);
 
 		if (choice_b < 0 || choice_b >= characters.size()) {

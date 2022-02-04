@@ -39,6 +39,11 @@
 - DONE MyArrayList implements List
 - DONE MenuRouter (addMenu, transfer)
 
+## Logging
+- DONE DAOs
+- DONE Menus
+- DONE Exceptions
+
 ## Testing
 - UserService
 - MyCharacterService

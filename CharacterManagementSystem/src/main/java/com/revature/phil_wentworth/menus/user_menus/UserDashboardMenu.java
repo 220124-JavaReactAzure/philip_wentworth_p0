@@ -16,6 +16,8 @@ public class UserDashboardMenu extends Menu {
 
 	@Override
 	public void render() throws Exception {
+		logger.log("Rendering UserDashboardMenu");
+		
 		StringBuilder menuChoices = new StringBuilder(
 				userService.getSessionUser().getUsername() + " Dashboard: \n");
 
@@ -29,6 +31,8 @@ public class UserDashboardMenu extends Menu {
 			System.out.print(menuChoices);
 
 			String userSelection = consoleReader.readLine();
+			
+			logger.log("User chose " + userSelection + " within UserDashboard");
 
 			switch (userSelection) {
 			case "1":

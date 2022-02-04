@@ -5,6 +5,7 @@ import java.io.BufferedReader;
 import com.revature.phil_wentworth.menus.Menu;
 import com.revature.phil_wentworth.models.MyCharacter;
 import com.revature.phil_wentworth.services.MyCharacterService;
+import com.revature.phil_wentworth.services.UserService;
 import com.revature.phil_wentworth.util.MenuRouter;
 import com.revature.phil_wentworth.util.MyArrayList;
 
@@ -18,10 +19,14 @@ public class CharacterModifyMenu extends Menu {
 
 	@Override
 	public void render() throws Exception {
+		logger.log("Rendering CharacterModifyMenu");
+		
 		MyArrayList<MyCharacter> characters = myCharacterService.getCharactersForUser();
 		
 		System.out.println("Enter a Character Number from above: ");
 		String userSelection = consoleReader.readLine();
+		logger.log("User chose " + " character number " + userSelection + " from CharacterModifyMenu " );
+		
 		int choice = Integer.valueOf(userSelection);
 		
 		if ( choice < 0 || choice >= characters.size() ) {
@@ -45,6 +50,7 @@ public class CharacterModifyMenu extends Menu {
 		
 		System.out.println("Which stat would you like to dump points from?");
 		userSelection = consoleReader.readLine();
+		logger.log("User chose " + " character number " + userSelection + " for dump from stat " );
 		fromStat = Integer.valueOf(userSelection);
 		
 		if ( fromStat < 0 || fromStat >= statNames.length ) {
@@ -55,6 +61,7 @@ public class CharacterModifyMenu extends Menu {
 		
 		System.out.println("Which stat would you like to pump points to?");
 		userSelection = consoleReader.readLine();
+		logger.log("User chose " + " character number " + userSelection + " for pump to stat " );
 		toStat = Integer.valueOf(userSelection);
 		
 		if ( toStat < 0 || toStat >= statNames.length ) {
@@ -65,6 +72,7 @@ public class CharacterModifyMenu extends Menu {
 		
 		System.out.println("How many points would you like to move from " + statNames[fromStat] + " to " + statNames[toStat] + "?");
 		userSelection = consoleReader.readLine();
+		logger.log("User chose " + " character number " + userSelection + " as dump value to pump " );
 		value = Integer.valueOf(userSelection);
 		
 		myCharacterService.dumpStatistic(c, fromStat, toStat, value);
