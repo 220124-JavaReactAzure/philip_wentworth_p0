@@ -19,8 +19,8 @@
 - DONE UserRegisterMenu (userService)
 - DONE UserLoginMenu (userService)
 - DONE UserDashboardMenu (userService)
-- PARTIAL CharacterGenerateMenu (myCharacterService)
-- PARTIAL CharacterListMenu (myCharacterService)
+- DONE CharacterGenerateMenu (myCharacterService)
+- DONE CharacterListMenu (myCharacterService)
 - PARTIAL CharacterModifyMenu (myCharacterService)
 - PARTIAL CharacterCompareMenu (myCharacterService)
 

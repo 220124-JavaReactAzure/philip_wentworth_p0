@@ -9,7 +9,7 @@ public class MyCharacter {
 	private String characterName;
 	
 	public MyCharacter() {
-		
+		this.statistics = new int[6];
 	}
 	
 	public MyCharacter(int id, String userEmail, String characterName) {

@@ -26,10 +26,10 @@ public class CharacterGenerateMenu extends Menu {
 
 			if (c != null) {
 				System.out.println(c);
-				router.transfer("user_dashboard");
+				router.transfer("/user_dashboard");
 			} else {
 				System.out.println("Character generation failed.");
-				router.transfer("user_dashboard");
+				router.transfer("/user_dashboard");
 			}
 		}
 		else {

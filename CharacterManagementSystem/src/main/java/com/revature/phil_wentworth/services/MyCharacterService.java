@@ -11,9 +11,9 @@ public class MyCharacterService {
 	private UserService userService;
 	private MyCharacterDAO myCharacterDAO;
 	private MyArrayList<MyCharacter> activeCharacters;
-	private static final int min_dump_stat = 9;
-	private static final int min_stat = 3;
-	private static final int max_stat = 18;
+	public static final int min_dump_stat = 9;
+	public static final int min_stat = 3;
+	public static final int max_stat = 18;
 	
 	public MyCharacterService(MyCharacterDAO myCharacterDAO, UserService userService) {
 		this.myCharacterDAO = myCharacterDAO;
