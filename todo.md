@@ -22,7 +22,7 @@
 - DONE CharacterGenerateMenu (myCharacterService)
 - DONE CharacterListMenu (myCharacterService)
 - DONE CharacterModifyMenu (myCharacterService)
-- PARTIAL CharacterCompareMenu (myCharacterService)
+- DONE CharacterCompareMenu (myCharacterService)
 
 ## Models
 - DONE MyCharacter (id, characterName, statistics[], userID)
@@ -38,3 +38,7 @@
 - DONE MyList interface (get)
 - DONE MyArrayList implements List
 - DONE MenuRouter (addMenu, transfer)
+
+## Testing
+- UserService
+- MyCharacterService
