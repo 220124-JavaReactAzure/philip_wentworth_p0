@@ -21,7 +21,7 @@
 - DONE UserDashboardMenu (userService)
 - DONE CharacterGenerateMenu (myCharacterService)
 - DONE CharacterListMenu (myCharacterService)
-- PARTIAL CharacterModifyMenu (myCharacterService)
+- DONE CharacterModifyMenu (myCharacterService)
 - PARTIAL CharacterCompareMenu (myCharacterService)
 
 ## Models

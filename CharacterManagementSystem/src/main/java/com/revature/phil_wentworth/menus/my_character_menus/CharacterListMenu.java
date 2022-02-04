@@ -47,7 +47,7 @@ public class CharacterListMenu extends Menu {
 				router.transfer("/user_dashboard");
 				break;
 			default:
-				System.out.println("Invalid option, please enter a single digit for your menu choice.");
+				System.out.println(userSelection + "is an invalid option, please enter a single digit for your menu choice.");
 				tryAgain = true;
 				break;
 			}
