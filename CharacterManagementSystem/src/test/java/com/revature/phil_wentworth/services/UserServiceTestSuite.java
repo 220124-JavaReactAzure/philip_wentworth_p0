@@ -15,4 +15,12 @@ public class UserServiceTestSuite {
 		mockUserDAO = mock(UserDAO.class);
 		sut = new UserService(mockUserDAO);
 	}
+	
+	//registerNewUser(String, String, String)
+	//authenticateUser(String, String)
+	//isUserValid(String, String)
+	//doesUsernameExist(String)
+	//isUsernameValid(String)
+	//doesEmailExist(String)
+	//isEmailValid(String)
 }
