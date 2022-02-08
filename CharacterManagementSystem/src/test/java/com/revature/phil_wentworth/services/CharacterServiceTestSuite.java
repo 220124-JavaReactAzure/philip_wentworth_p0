@@ -1,11 +1,18 @@
 package com.revature.phil_wentworth.services;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import com.revature.phil_wentworth.daos.MyCharacterDAO;
+import com.revature.phil_wentworth.models.MyCharacter;
+import com.revature.phil_wentworth.models.User;
 
 public class CharacterServiceTestSuite {
 	MyCharacterService sut;
@@ -21,12 +28,38 @@ public class CharacterServiceTestSuite {
 	
 	@Test
 	public void test_generateMyCharacter_throwsExceptionIfNameInvalid() {
-		
+		User u = new User("valid@valid", "valid", "valid");
+		when(mockUserService.getSessionUser()).thenReturn(u);
+		try {
+			sut.generateMyCharacter("!@?");
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			verify(mockCharacterDAO, times(0)).create(any());
+		}
 	}
 	
 	@Test
 	public void test_generateMyCharacter_returnsMyCharacterIfNameValid() {
-		
+		User u = new User("valid@valid", "valid", "valid");
+		MyCharacter c;
+		when(mockUserService.getSessionUser()).thenReturn(u);
+		try {
+			c = sut.generateMyCharacter("valid");
+			Assert.assertTrue( c.getCharacterName().equals("valid") );
+			int[] stats = c.getStatistics();
+			for (int i=0; i<stats.length; i++) {
+				Assert.assertTrue( stats[i]>=3 && stats[i]<=18 );
+			}
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			verify(mockCharacterDAO, times(1)).create(any());
+		}
 	}
 	
 	@Test

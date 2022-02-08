@@ -77,29 +77,4 @@ public class UserServiceTestSuite {
 		
 		Assert.assertNull(u);
 	}
-	
-	@Test
-	public void test_isUserValid_throwsExceptionIfUsernameInvalid() {
-		
-	}
-	
-	@Test
-	public void test_isUserValid_throwsExceptionIfEmailInvalid() {
-		
-	}
-	
-	@Test
-	public void test_isUserValid_throwsExceptionIfUsernameExists() {
-		
-	}
-	
-	@Test
-	public void test_isUserValid_throwsExceptionIfEmailExists() {
-		
-	}
-	
-	@Test
-	public void test_isUserValid_returnsTrueIfUsernameAndEmailValid() {
-		
-	}
 }
