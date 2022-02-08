@@ -13,6 +13,7 @@ import org.junit.Test;
 import com.revature.phil_wentworth.daos.MyCharacterDAO;
 import com.revature.phil_wentworth.models.MyCharacter;
 import com.revature.phil_wentworth.models.User;
+import com.revature.phil_wentworth.util.MyArrayList;
 
 public class CharacterServiceTestSuite {
 	MyCharacterService sut;
@@ -64,17 +65,49 @@ public class CharacterServiceTestSuite {
 	
 	@Test
 	public void test_getCharactersForUser_returnsCharacterListIfUserValid() {
+		MyArrayList<MyCharacter> mcs = new MyArrayList<>();
+		MyArrayList<MyCharacter> testResult = new MyArrayList<>();
+		User u = new User("valid@valid", "valid", "valid");
+		when(mockUserService.getSessionUser()).thenReturn(u);
+		when(mockCharacterDAO.getMyCharactersByEmail(any())).thenReturn(mcs);
+		mcs.add(sut.generateMyCharacter("valid"));
+		mcs.add(sut.generateMyCharacter("valid"));
+		mcs.add(sut.generateMyCharacter("valid"));
 		
+		testResult = sut.getCharactersForUser();
+		
+		Assert.assertTrue( testResult.size() == 3 );
 	}
 	
 	@Test
-	public void test_getCharactersForUser_returnsEmptyListIfUserInvalid() {
+	public void test_getCharactersForUser_returnsNullIfDAO_returnsNull() {
+		MyArrayList<MyCharacter> mcs = new MyArrayList<>();
+		MyArrayList<MyCharacter> testResult = new MyArrayList<>();
+		User u = new User("valid@valid", "valid", "valid");
+		when(mockUserService.getSessionUser()).thenReturn(u);
+		when(mockCharacterDAO.getMyCharactersByEmail(any())).thenReturn(null);
+		mcs.add(sut.generateMyCharacter("valid"));
+		mcs.add(sut.generateMyCharacter("valid"));
+		mcs.add(sut.generateMyCharacter("valid"));
 		
+		testResult = sut.getCharactersForUser();
+		
+		Assert.assertNull( testResult );
 	}
 	
 	@Test
-	public void test_getCharactersForUser_returnsEmptyListIfUserNotSet() {
+	public void test_getCharactersForUser_returnsNullIfUserNotSet() {
+		MyArrayList<MyCharacter> mcs = new MyArrayList<>();
+		MyArrayList<MyCharacter> testResult = new MyArrayList<>();
+		when(mockUserService.getSessionUser()).thenReturn(null);
+		when(mockCharacterDAO.getMyCharactersByEmail(any())).thenReturn(null);
+		mcs.add(sut.generateMyCharacter("valid"));
+		mcs.add(sut.generateMyCharacter("valid"));
+		mcs.add(sut.generateMyCharacter("valid"));
 		
+		testResult = sut.getCharactersForUser();
+		
+		Assert.assertNull( testResult );
 	}
 	
 	@Test
