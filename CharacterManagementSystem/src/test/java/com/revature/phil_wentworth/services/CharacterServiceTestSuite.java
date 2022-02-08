@@ -126,6 +126,42 @@ public class CharacterServiceTestSuite {
 				Assert.assertTrue( c.getStatistic(i) == 12 );
 			}
 		}
+		
+		try {
+			sut.dumpStatistic(c, -10, 1, 12);
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			for (int i=0; i<c.getStatistics().length; i++) {
+				Assert.assertTrue( c.getStatistic(i) == 12 );
+			}
+		}
+		
+		try {
+			sut.dumpStatistic(c, 0, -1, 12);
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			for (int i=0; i<c.getStatistics().length; i++) {
+				Assert.assertTrue( c.getStatistic(i) == 12 );
+			}
+		}
+		
+		try {
+			sut.dumpStatistic(c, 0, -1, -1);
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			for (int i=0; i<c.getStatistics().length; i++) {
+				Assert.assertTrue( c.getStatistic(i) == 12 );
+			}
+		}
 	}
 	
 	@Test
