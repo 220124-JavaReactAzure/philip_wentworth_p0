@@ -177,3 +177,5 @@ InvalidCharacterNameException created with message Character names can only cont
 InvalidCharacterNameException created with message Character names can only contain letters and spaces.
 InvalidCharacterNameException created with message Character names can only contain letters and spaces.
 InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.

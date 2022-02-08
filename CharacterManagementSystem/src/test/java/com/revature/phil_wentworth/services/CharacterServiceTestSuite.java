@@ -112,11 +112,42 @@ public class CharacterServiceTestSuite {
 	
 	@Test
 	public void test_dumpStatistic_throwsExceptionWhenIllegalDumpAttempted() {
+		int[] stats = {12,12,12,12,12,12};
+		MyCharacter c = new MyCharacter(0, "valid@valid", "valid", stats);
 		
+		try {
+			sut.dumpStatistic(c, 0, 1, 12);
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			for (int i=0; i<c.getStatistics().length; i++) {
+				Assert.assertTrue( c.getStatistic(i) == 12 );
+			}
+		}
 	}
 	
 	@Test
 	public void test_dumpStatistic_changesMyCharacterIfDumpIsLegal() {
+		int[] stats = {12,12,12,12,12,12};
+		MyCharacter c = new MyCharacter(0, "valid@valid", "valid", stats);
 		
+		try {
+			sut.dumpStatistic(c, 0, 1, 3);
+			sut.dumpStatistic(c, 2, 3, 3);
+			sut.dumpStatistic(c, 4, 5, 3);
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			Assert.assertTrue( c.getStatistic(0) == 9 );
+			Assert.assertTrue( c.getStatistic(1) == 15 );
+			Assert.assertTrue( c.getStatistic(2) == 9 );
+			Assert.assertTrue( c.getStatistic(3) == 15 );
+			Assert.assertTrue( c.getStatistic(4) == 9 );
+			Assert.assertTrue( c.getStatistic(5) == 15 );
+		}
 	}
 }
