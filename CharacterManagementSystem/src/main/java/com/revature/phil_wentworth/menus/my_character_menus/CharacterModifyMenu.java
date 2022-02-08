@@ -75,8 +75,13 @@ public class CharacterModifyMenu extends Menu {
 		logger.log("User chose " + " character number " + userSelection + " as dump value to pump " );
 		value = Integer.valueOf(userSelection);
 		
-		myCharacterService.dumpStatistic(c, fromStat, toStat, value);
-		System.out.println(c);
+		try {
+			myCharacterService.dumpStatistic(c, fromStat, toStat, value);
+			System.out.println(c);
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		router.transfer("/user_dashboard");
 	}
 }
