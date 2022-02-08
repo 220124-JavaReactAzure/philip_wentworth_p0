@@ -3,6 +3,7 @@ package com.revature.phil_wentworth.services;
 import static org.mockito.Mockito.mock;
 
 import org.junit.Before;
+import org.junit.Test;
 
 import com.revature.phil_wentworth.daos.UserDAO;
 
@@ -16,11 +17,48 @@ public class UserServiceTestSuite {
 		sut = new UserService(mockUserDAO);
 	}
 	
-	//registerNewUser(String, String, String)
-	//authenticateUser(String, String)
-	//isUserValid(String, String)
-	//doesUsernameExist(String)
-	//isUsernameValid(String)
-	//doesEmailExist(String)
-	//isEmailValid(String)
+	@Test
+	public void test_registerNewUser_returnsUserIfSuccessful() {
+		
+	}
+	
+	@Test
+	public void test_registerNewUser_returnsNullIfFailure() {
+		
+	}
+	
+	@Test
+	public void test_authenticateUser_returnsUserIfSuccessful() {
+		
+	}
+	
+	@Test
+	public void test_authenticateUser_returnsNullIfFailure() {
+		
+	}
+	
+	@Test
+	public void test_isUserValid_throwsExceptionIfUsernameInvalid() {
+		
+	}
+	
+	@Test
+	public void test_isUserValid_throwsExceptionIfEmailInvalid() {
+		
+	}
+	
+	@Test
+	public void test_isUserValid_throwsExceptionIfUsernameExists() {
+		
+	}
+	
+	@Test
+	public void test_isUserValid_throwsExceptionIfEmailExists() {
+		
+	}
+	
+	@Test
+	public void test_isUserValid_returnsTrueIfUsernameAndEmailValid() {
+		
+	}
 }

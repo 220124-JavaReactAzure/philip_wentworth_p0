@@ -23,12 +23,13 @@ public class UserService {
 	public User registerNewUser(String email, String username, String password) {
 		try {
 			isUserValid(email,username);
+			User newUser = new User(email, username, password);
+			return userDao.create(newUser);
 		}
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		User newUser = new User(email, username, password);
-		return userDao.create(newUser);
+		return null;
 	}
 
 	public User authenticateUser(String username, String password) {

@@ -78,3 +78,61 @@ User chose  character number 3 for pump to stat
 User chose  character number 10 as dump value to pump 
 InvalidStatisticException created with message Charisma ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
 AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 6 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 3 for pump to stat 
+User chose  character number 10 as dump value to pump 
+InvalidStatisticException created with message Charisma ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 6 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 3 for pump to stat 
+User chose  character number 8 as dump value to pump 
+MyCharacterDAO Updated MyCharacter object 
+Chesterton:
+STR	DEX	CON	INT	WIS	CHA	
+10	10	11	16	15	9	
+Rendering UserDashboardMenu
+User chose 3 within UserDashboard
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserRegisterMenu
+User entered tester@test.com as their email.
+UserDAO.findById found id
+tester@test.com was aleady registered.
+User entered q as their email.
+qis not a valid email.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserRegisterMenu

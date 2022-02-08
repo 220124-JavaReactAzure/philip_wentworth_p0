@@ -3,6 +3,7 @@ package com.revature.phil_wentworth.services;
 import static org.mockito.Mockito.mock;
 
 import org.junit.Before;
+import org.junit.Test;
 
 import com.revature.phil_wentworth.daos.MyCharacterDAO;
 
@@ -18,12 +19,38 @@ public class CharacterServiceTestSuite {
 		sut = new MyCharacterService(mockCharacterDAO, mockUserService);
 	}
 	
-	//generateMyCharacter(String)
-	//getCharactersForUser()
-	//dumpStatistic(MyCharacter, int, int, int)
-	//compareMyCharacters(MyCharacter, MyCharacter)
-	//isCharacterNameValid(String)
-	//isStatisticValid(int)
-	//printCharacterStatisticLine(MyCharacter)
-	//logout()
+	@Test
+	public void test_generateMyCharacter_throwsExceptionIfNameInvalid() {
+		
+	}
+	
+	@Test
+	public void test_generateMyCharacter_returnsMyCharacterIfNameValid() {
+		
+	}
+	
+	@Test
+	public void test_getCharactersForUser_returnsCharacterListIfUserValid() {
+		
+	}
+	
+	@Test
+	public void test_getCharactersForUser_returnsEmptyListIfUserInvalid() {
+		
+	}
+	
+	@Test
+	public void test_getCharactersForUser_returnsEmptyListIfUserNotSet() {
+		
+	}
+	
+	@Test
+	public void test_dumpStatistic_throwsExceptionWhenIllegalDumpAttempted() {
+		
+	}
+	
+	@Test
+	public void test_dumpStatistic_changesMyCharacterIfDumpIsLegal() {
+		
+	}
 }
