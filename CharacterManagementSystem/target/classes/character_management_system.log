@@ -1,0 +1,181 @@
+Logger initialized
+AppState initialized
+AppState.startup() called
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering CharacterGenerateMenu
+User entered Frank for characterName
+Rendering CharacterListMenu
+User selected 3 within CharacterListMenu 
+Rendering CharacterListMenu
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+User chose  character number -1 from CharacterModifyMenu 
+Rendering CharacterListMenu
+User selected 2 within CharacterListMenu 
+Rendering CharacterCompareMenu
+User entered 1 for choice a
+User entered 2 for choice b
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User choce 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered Logger the Lumberjack for characterName
+Created MyCharacter object 
+Logger the Lumberjack:
+STR	DEX	CON	INT	WIS	CHA	
+10	5	8	15	12	8	
+Rendering UserDashboardMenu
+User choce 3 within UserDashboard
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered Bethothy for characterName
+MyCharacterDAO Created MyCharacter object 
+Bethothy:
+STR	DEX	CON	INT	WIS	CHA	
+10	13	10	6	9	12	
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered Chesterton for characterName
+MyCharacterDAO Created MyCharacter object 
+Chesterton:
+STR	DEX	CON	INT	WIS	CHA	
+10	10	11	8	15	17	
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 2 within CharacterListMenu 
+Rendering CharacterCompareMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User entered 2 for choice a
+User entered 6 for choice b
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 6 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 3 for pump to stat 
+User chose  character number 10 as dump value to pump 
+InvalidStatisticException created with message Charisma ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 6 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 3 for pump to stat 
+User chose  character number 10 as dump value to pump 
+InvalidStatisticException created with message Charisma ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 6 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 3 for pump to stat 
+User chose  character number 8 as dump value to pump 
+MyCharacterDAO Updated MyCharacter object 
+Chesterton:
+STR	DEX	CON	INT	WIS	CHA	
+10	10	11	16	15	9	
+Rendering UserDashboardMenu
+User chose 3 within UserDashboard
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserRegisterMenu
+User entered tester@test.com as their email.
+UserDAO.findById found id
+tester@test.com was aleady registered.
+User entered q as their email.
+qis not a valid email.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserRegisterMenu
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered ! for characterName
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+EmailAlreadyExistsException created with message valid@valid is already registered.
+EmailAlreadyExistsException created with message Username valid is already in use.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidEmailException created with message Email address must follow format user@domain.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidEmailException created with message Email address must follow format user@domain.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.

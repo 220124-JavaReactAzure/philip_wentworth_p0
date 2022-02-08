@@ -21,6 +21,9 @@ public class MyCharacterService {
 	}
 	
 	public MyCharacter generateMyCharacter(String characterName) throws InvalidCharacterNameException {
+		if (userService.getSessionUser() == null) {
+			return null;
+		}
 		String userEmail = userService.getSessionUser().getEmail();
 		if (!isCharacterNameValid(characterName)) {
 			throw new InvalidCharacterNameException("Character names can only contain letters and spaces.");
@@ -36,6 +39,9 @@ public class MyCharacterService {
 	}
 	
 	public MyArrayList<MyCharacter> getCharactersForUser() {
+		if (userService.getSessionUser() == null) {
+			return null;
+		}
 		String userEmail = userService.getSessionUser().getEmail();
 		activeCharacters = (MyArrayList<MyCharacter>) myCharacterDAO.getMyCharactersByEmail(userEmail);
 		return activeCharacters;

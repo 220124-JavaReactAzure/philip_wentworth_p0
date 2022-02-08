@@ -10,9 +10,11 @@ import com.revature.phil_wentworth.models.MyCharacter;
 import com.revature.phil_wentworth.util.ConnectionFactory;
 import com.revature.phil_wentworth.util.MyArrayList;
 import com.revature.phil_wentworth.util.MyList;
+import com.revature.phil_wentworth.util.logging.Logger;
 
 public class MyCharacterDAO implements CrudDAO<MyCharacter> {
-
+	private Logger logger = Logger.getLogger(false);
+	
 	@Override
 	public MyCharacter create(MyCharacter newObj) {
 		try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
@@ -36,11 +38,14 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 			int rowsInserted = ps.executeUpdate();
 
 			if (rowsInserted != 0) {
+				logger.log("MyCharacterDAO Created MyCharacter object ");
+				logger.log(newObj.toString());
 				return newObj;
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("MyCharacterDAO.create failed due to SQLException: " + e.getStackTrace());
 		}
 
 		return null;
@@ -70,10 +75,12 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 				charactersList.add(c);
 			}
 
+			logger.log("MyCharacterDAO.findAll returning successfully with full list of MyCharacter objects");
 			return charactersList;
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("MyCharacterDAO.findAll failed due to SQLException: " + e.getStackTrace());
 		}
 
 		return null;
@@ -103,10 +110,12 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 				charactersList.add(c);
 			}
 
+			logger.log("MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects");
 			return charactersList;
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("MyCharacterDAO.getCharacterByEmail failed due to SQLException: " + e.getStackTrace());
 		}
 
 		return null;
@@ -136,6 +145,7 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("MyCharacterDAO.findById failed due to SQLException: " + e.getStackTrace());
 		}
 		return null;
 	}
@@ -163,11 +173,14 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 			int rowsInserted = ps.executeUpdate();
 
 			if (rowsInserted != 0) {
+				logger.log("MyCharacterDAO Updated MyCharacter object ");
+				logger.log(updatedObj.toString());
 				return true;
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("MyCharacterDAO.update failed due to SQLException: " + e.getStackTrace());
 		}
 
 		return false;
@@ -186,11 +199,13 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 			int rowsDeleted = ps.executeUpdate();
 
 			if (rowsDeleted != 0) {
+				logger.log("MyCharacterDAO Deleted MyCharacter object id " + id);
 				return true;
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("MyCharacterDAO.delete failed due to SQLException: " + e.getStackTrace());
 		}
 
 		return false;

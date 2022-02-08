@@ -10,8 +10,10 @@ import com.revature.phil_wentworth.models.User;
 import com.revature.phil_wentworth.util.ConnectionFactory;
 import com.revature.phil_wentworth.util.MyArrayList;
 import com.revature.phil_wentworth.util.MyList;
+import com.revature.phil_wentworth.util.logging.Logger;
 
 public class UserDAO implements CrudDAO<User> {
+	private Logger logger = Logger.getLogger(false);
 
 	@Override
 	public User create(User newObj) {
@@ -28,11 +30,13 @@ public class UserDAO implements CrudDAO<User> {
 			int rowsInserted = ps.executeUpdate();
 
 			if (rowsInserted != 0) {
+				logger.log("UserDAO.create succesful");
 				return newObj;
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("UserDAO.create failed due to SQLException " + e.getStackTrace());
 		}
 
 		return null;
@@ -58,10 +62,12 @@ public class UserDAO implements CrudDAO<User> {
 				usersList.add(user);
 			}
 
+			logger.log("UserDAO.findAll succesful");
 			return usersList;
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("UserDAO.findAll failed due to SQLException " + e.getStackTrace());
 		}
 
 		return null;
@@ -81,11 +87,14 @@ public class UserDAO implements CrudDAO<User> {
 				user.setEmail(resultSet.getString("email"));
 				user.setUsername(resultSet.getString("username"));
 				user.setPassword(resultSet.getString("password"));
+				logger.log("UserDAO.findById found id");
 				return user;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("UserDAO.findById failed due to SQLException " + e.getStackTrace());
 		}
+		logger.log("UserDAO.findById exited without finding id");
 		return null;
 	}
 	
@@ -102,11 +111,14 @@ public class UserDAO implements CrudDAO<User> {
 				user.setEmail(resultSet.getString("email"));
 				user.setUsername(resultSet.getString("username"));
 				user.setPassword(resultSet.getString("password"));
+				logger.log("UserDAO.findByUsername found username");
 				return user;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("UserDAO.findByUsername failed due to SQLException " + e.getStackTrace());
 		}
+		logger.log("UserDAO.findByUsername exited without finding username");
 		return null;
 	}
 	
@@ -124,11 +136,14 @@ public class UserDAO implements CrudDAO<User> {
 				user.setEmail(resultSet.getString("email"));
 				user.setUsername(resultSet.getString("username"));
 				user.setPassword(resultSet.getString("password"));
+				logger.log("UserDAO.findByUsernameAndPassword found username and password combination");
 				return user;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("UserDAO.findByUsernameAndPassword failed due to SQLException " + e.getStackTrace());
 		}
+		logger.log("UserDAO.findByUsernameAndPassword exitied without finding username and password combination");
 		return null;
 	}
 
@@ -148,13 +163,14 @@ public class UserDAO implements CrudDAO<User> {
 			int rowsUpdated = ps.executeUpdate();
 
 			if (rowsUpdated != 0) {
+				logger.log("UserDAO.update succeeded");
 				return true;
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("UserDAO.update failed due to SQLException " + e.getStackTrace());
 		}
-
 		return false;
 	}
 
@@ -171,11 +187,13 @@ public class UserDAO implements CrudDAO<User> {
 			int rowsDeleted = ps.executeUpdate();
 
 			if (rowsDeleted != 0) {
+				logger.log("UserDAO.delete succesful");
 				return true;
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			logger.log("UserDAO.delete failed due to SQLException " + e.getStackTrace());
 		}
 
 		return false;

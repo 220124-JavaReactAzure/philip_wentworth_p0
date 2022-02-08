@@ -18,8 +18,11 @@ public class CharacterGenerateMenu extends Menu {
 
 	@Override
 	public void render() throws Exception {
+		logger.log("Rendering CharacterGenerateMenu");
+		
 		System.out.println("Enter a name for your character: ");
 		String characterName = consoleReader.readLine();
+		logger.log("User entered " + characterName + " for characterName");
 
 		if (myCharacterService.isCharacterNameValid(characterName)) {
 			MyCharacter c = myCharacterService.generateMyCharacter(characterName);
