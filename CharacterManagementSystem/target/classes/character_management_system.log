@@ -159,3 +159,9 @@ InvalidUsernameException created with message Usernames can only contain letters
 InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
 InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
 InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidEmailException created with message Email address must follow format user@domain.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidEmailException created with message Email address must follow format user@domain.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.

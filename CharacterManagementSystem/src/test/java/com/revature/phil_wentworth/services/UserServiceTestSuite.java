@@ -7,7 +7,6 @@ import static org.mockito.Mockito.when;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import com.revature.phil_wentworth.daos.UserDAO;
 import com.revature.phil_wentworth.models.User;
@@ -58,12 +57,25 @@ public class UserServiceTestSuite {
 	
 	@Test
 	public void test_authenticateUser_returnsUserIfSuccessful() {
+		User valid = new User("valid@valid", "valid", "valid");
+		when(mockUserDAO.findByUsernameAndPassword( "valid", "valid" )).thenReturn(valid);
 		
+		User u = sut.authenticateUser("valid", "valid");
+		
+		Assert.assertTrue( u.getEmail().equals("valid@valid") );
+		Assert.assertTrue( u.getUsername().equals("valid") );
+		Assert.assertTrue( u.getPassword().equals("valid") );
 	}
 	
 	@Test
 	public void test_authenticateUser_returnsNullIfFailure() {
+		User valid = new User("valid@valid", "valid", "valid");
+		when(mockUserDAO.findByUsernameAndPassword( "valid", "valid" )).thenReturn(valid);
+		when(mockUserDAO.findByUsernameAndPassword( "invalid", "invalid" )).thenReturn(null);
 		
+		User u = sut.authenticateUser("invalid", "invalid");
+		
+		Assert.assertNull(u);
 	}
 	
 	@Test
