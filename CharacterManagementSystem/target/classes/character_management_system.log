@@ -136,3 +136,26 @@ Rendering UserLoginMenu
 UserDAO.findByUsernameAndPassword exitied without finding username and password combination
 userService.authenticateUser returned false when called within UserLoginMenu
 Rendering UserRegisterMenu
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered ! for characterName
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+EmailAlreadyExistsException created with message valid@valid is already registered.
+EmailAlreadyExistsException created with message Username valid is already in use.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.

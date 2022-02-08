@@ -152,3 +152,13 @@ Rendering UserDashboardMenu
 User chose 1 within UserDashboard
 Rendering CharacterGenerateMenu
 User entered ! for characterName
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+EmailAlreadyExistsException created with message valid@valid is already registered.
+EmailAlreadyExistsException created with message Username valid is already in use.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidEmailException created with message Email address must follow format user@domain.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character.
