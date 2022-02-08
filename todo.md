@@ -45,5 +45,5 @@
 - DONE Exceptions
 
 ## Testing
-- PROGRESS UserService
-- PROGRESS MyCharacterService
+- DONE UserService
+- DONE MyCharacterService
