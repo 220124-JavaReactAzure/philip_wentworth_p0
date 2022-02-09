@@ -31,9 +31,11 @@ public class CharacterListMenu extends Menu {
 		menuChoices.append("2. Compare my Characters\n");
 		menuChoices.append("3. Return to my Dashboard\n");
 		
-		boolean tryAgain = false;
+		boolean tryAgain = true;
 
-		do {
+		while (tryAgain) {
+			tryAgain = false;
+			
 			System.out.print(menuChoices);
 
 			String userSelection = consoleReader.readLine();
@@ -54,6 +56,6 @@ public class CharacterListMenu extends Menu {
 				tryAgain = true;
 				break;
 			}
-		} while (tryAgain);
+		} 
 	}
 }

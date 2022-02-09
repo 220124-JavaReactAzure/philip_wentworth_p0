@@ -25,9 +25,11 @@ public class UserDashboardMenu extends Menu {
 		menuChoices.append("2. View My Characters\n");
 		menuChoices.append("3. Logout\n");
 		
-		boolean tryAgain = false;
+		boolean tryAgain = true;
 
-		do {
+		while (tryAgain) {
+			tryAgain = false;
+			
 			System.out.print(menuChoices);
 
 			String userSelection = consoleReader.readLine();
@@ -50,6 +52,6 @@ public class UserDashboardMenu extends Menu {
 				tryAgain = true;
 				break;
 			}
-		} while (tryAgain);
+		}
 	}
 }
