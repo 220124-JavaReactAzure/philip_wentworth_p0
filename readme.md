@@ -12,7 +12,7 @@ Character Management System helps users generate and keep track of characters fo
 - login with my existing credentials
 - create at least one character with a name I provide and randomly generated int values strength, dexterity, constitution, intelligence, wisdom, and charisma between 3 and 18
 - view a list of my characters
-- select a character and view their statistics
+- select a character to modify and view their statistics
 - move points from one statistic into another while viewing a selected character's statistics. A statistic cannot be below 3 or above 18.
 - select 2 characters and view a side by side comparison of their statistics
 
