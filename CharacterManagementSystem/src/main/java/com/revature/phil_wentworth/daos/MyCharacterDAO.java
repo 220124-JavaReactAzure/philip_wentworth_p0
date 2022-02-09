@@ -194,7 +194,7 @@ public class MyCharacterDAO implements CrudDAO<MyCharacter> {
 
 			PreparedStatement ps = conn.prepareStatement(sql);
 
-			ps.setString(1, id);
+			ps.setInt(1, Integer.parseInt(id));
 
 			int rowsDeleted = ps.executeUpdate();
 
