@@ -24,6 +24,7 @@ public class UserDashboardMenu extends Menu {
 		menuChoices.append("1. Generate Character\n");
 		menuChoices.append("2. View My Characters\n");
 		menuChoices.append("3. Logout\n");
+		menuChoices.append("unsubscribe. Delete your account. This cannot be undone.\n");
 		
 		boolean tryAgain = true;
 
@@ -47,8 +48,12 @@ public class UserDashboardMenu extends Menu {
 				userService.logout();
 				router.transfer("/welcome");
 				break;
+			case "unsubscribe":
+				userService.deleteSessionUserAccount();
+				router.transfer("/welcome");
+				break;
 			default:
-				System.out.println("Invalid option, please enter a single digit for your menu choice.");
+				System.out.println("Invalid option, please enter a single digit or 'unsubscribe' for your menu choice.");
 				tryAgain = true;
 				break;
 			}

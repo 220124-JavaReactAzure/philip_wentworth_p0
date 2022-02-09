@@ -106,4 +106,9 @@ public class UserService {
 	public void logout() {
 		sessionUser = null;
 	}
+	
+	public void deleteSessionUserAccount() {
+		userDao.delete(sessionUser.getEmail());
+		sessionUser = null;
+	}
 }

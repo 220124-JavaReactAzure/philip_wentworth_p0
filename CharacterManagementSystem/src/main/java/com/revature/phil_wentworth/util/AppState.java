@@ -8,6 +8,7 @@ import com.revature.phil_wentworth.daos.MyCharacterDAO;
 import com.revature.phil_wentworth.daos.UserDAO;
 import com.revature.phil_wentworth.menus.WelcomeMenu;
 import com.revature.phil_wentworth.menus.my_character_menus.CharacterCompareMenu;
+import com.revature.phil_wentworth.menus.my_character_menus.CharacterDeleteMenu;
 import com.revature.phil_wentworth.menus.my_character_menus.CharacterGenerateMenu;
 import com.revature.phil_wentworth.menus.my_character_menus.CharacterListMenu;
 import com.revature.phil_wentworth.menus.my_character_menus.CharacterModifyMenu;
@@ -46,6 +47,7 @@ public class AppState {
 		router.addMenu(new CharacterListMenu(consoleReader, router, myCharacterService));
 		router.addMenu(new CharacterModifyMenu(consoleReader, router, myCharacterService));
 		router.addMenu(new CharacterCompareMenu(consoleReader, router, myCharacterService));
+		router.addMenu(new CharacterDeleteMenu(consoleReader, router, myCharacterService));
 		
 		logger.log("AppState initialized");
 	}

@@ -30,6 +30,7 @@ public class CharacterListMenu extends Menu {
 		menuChoices.append("1. Modify a Character\n");
 		menuChoices.append("2. Compare my Characters\n");
 		menuChoices.append("3. Return to my Dashboard\n");
+		menuChoices.append("9. Delete a Character. This cannot be undone.\n");
 		
 		boolean tryAgain = true;
 
@@ -50,6 +51,9 @@ public class CharacterListMenu extends Menu {
 				break;
 			case "3":
 				router.transfer("/user_dashboard");
+				break;
+			case "9":
+				router.transfer("/character_delete");
 				break;
 			default:
 				System.out.println(userSelection + "is an invalid option, please enter a single digit for your menu choice.");

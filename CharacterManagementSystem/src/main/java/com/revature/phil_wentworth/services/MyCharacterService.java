@@ -130,6 +130,21 @@ public class MyCharacterService {
 		System.out.print("\n");
 	}
 	
+	public boolean delete(MyCharacter c) {
+		try {
+			String id = Integer.toString(c.getId());
+			myCharacterDAO.delete(id);
+			activeCharacters.remove(c);
+			return true;
+		}
+		catch (Exception e) {
+			return false;
+		}
+		finally {
+			
+		}
+	}
+	
 	public void logout() {
 		activeCharacters = null;
 		userService.logout();
