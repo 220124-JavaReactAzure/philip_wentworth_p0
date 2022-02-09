@@ -57,7 +57,7 @@ public class UserRegisterMenu extends Menu {
 				}
 			}
 			else {
-				System.out.println(userSelection + " is not a valid username. A-Z, a-z, and _ only.");
+				System.out.println(userSelection + " is not a valid username. A-Z, a-z, and _ only. Maximum length is 40.");
 				logger.log(userSelection + " was not a valid username.");
 			}
 		} while (username == null);

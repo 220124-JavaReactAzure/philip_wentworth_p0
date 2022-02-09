@@ -43,6 +43,7 @@ public class UserDashboardMenu extends Menu {
 				break;
 			case "3":
 				userService.logout();
+				router.transfer("/welcome");
 				break;
 			default:
 				System.out.println("Invalid option, please enter a single digit for your menu choice.");
