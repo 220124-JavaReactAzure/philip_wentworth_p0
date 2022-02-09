@@ -43,10 +43,10 @@ public class UserService {
 
 	public boolean isUserValid(String email, String username) throws EmailAlreadyExistsException, InvalidEmailException, InvalidUsernameException, UsernameAlreadyExistsException {
 		if (!isUsernameValid(username)) {
-			throw new InvalidUsernameException("Usernames can only contain letters and the underscore character.");
+			throw new InvalidUsernameException("Usernames can only contain letters and the underscore character, maximum length is 40.");
 		}
 		if (!isEmailValid(email)) {
-			throw new InvalidEmailException("Email address must follow format user@domain.");
+			throw new InvalidEmailException("Email address must follow format user@domain, maximum length is 254.");
 		}
 		if (doesUsernameExist(username) ) {
 			throw new EmailAlreadyExistsException("Username "+username+" is already in use.");
@@ -65,6 +65,10 @@ public class UserService {
 	}
 
 	public boolean isUsernameValid(String username) {
+		if (username.length() > 40) {
+			return false;
+		}
+		
 		char[] letters = username.toCharArray();
 
 		for (int i = 0; i < letters.length; i++) {
@@ -85,6 +89,10 @@ public class UserService {
 	}
 
 	public boolean isEmailValid(String userEmail) {
+		if (userEmail.length()>254) {
+			return false;
+		}
+		
 		Pattern pattern = Pattern.compile("^(.+)@(.+)$");
 	    Matcher matcher = pattern.matcher(userEmail);
 	    boolean matchFound = matcher.find();

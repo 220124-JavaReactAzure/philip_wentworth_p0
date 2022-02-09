@@ -26,7 +26,7 @@ public class MyCharacterService {
 		}
 		String userEmail = userService.getSessionUser().getEmail();
 		if (!isCharacterNameValid(characterName)) {
-			throw new InvalidCharacterNameException("Character names can only contain letters and spaces.");
+			throw new InvalidCharacterNameException("Character names can only contain letters and spaces, maximum length is 40.");
 		}
 		int[] stats = new int[6];
 		for (int i=0; i<stats.length; i++) {
@@ -92,6 +92,10 @@ public class MyCharacterService {
 	
 	public boolean isCharacterNameValid (String characterName){
 		char[] letters = characterName.toCharArray();
+		
+		if (characterName.length()>40) {
+			return false;
+		}
 		
 		for (int i=0; i<letters.length; i++) {
 			if (! ((letters[i] >= 'A' && letters[i] <= 'Z') || (letters[i] >= 'a' && letters[i] <= 'z') || letters[i]==' ') ) {

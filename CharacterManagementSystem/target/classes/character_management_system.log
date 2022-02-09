@@ -299,3 +299,29 @@ Rendering CharacterModifyMenu
 MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
 User chose  character number nope from CharacterModifyMenu 
 Rendering UserDashboardMenu
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 2 within CharacterListMenu 
+Rendering CharacterCompareMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User entered nope for choice a
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 2 within CharacterListMenu 
+Rendering CharacterCompareMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User entered 3 for choice a
+User entered nope for choice b
+Rendering UserDashboardMenu
+User chose 3 within UserDashboard
+AppState.startup() finished
