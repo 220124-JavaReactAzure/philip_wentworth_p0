@@ -902,3 +902,199 @@ Rendering UserDashboardMenu
 User chose unsubscribe within UserDashboard
 UserDAO.delete succesful
 AppState.startup() finished
+InvalidEmailException created with message Email address must follow format user@domain, maximum length is 254.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidEmailException created with message Email address must follow format user@domain, maximum length is 254.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Minimum dump value is 1.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces, maximum length is 40.
+InvalidEmailException created with message Email address must follow format user@domain, maximum length is 254.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Logger initialized
+AppState initialized
+AppState.startup() called
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose nope within UserDashboard
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 9 within CharacterListMenu 
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 3 from CharacterModifyMenu 
+MyCharacterDAO Deleted MyCharacter object id 7
+Rendering UserDashboardMenu
+Logger initialized
+AppState initialized
+AppState.startup() called
+InvalidEmailException created with message Email address must follow format user@domain, maximum length is 254.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Minimum dump value is 1.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces, maximum length is 40.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserRegisterMenu
+User entered invalid email as their email.
+invalid emailis not a valid email.
+User entered demo@test.com as their email.
+UserDAO.findById exited without finding id
+@#$user was not a valid username.
+UserDAO.findByUsername exited without finding username
+UserDAO.findByUsername exited without finding username
+UserDAO.findById exited without finding id
+UserDAO.create succesful
+Successfully registered demo@test.com as demo
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered #$#@  for characterName
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered Ed for characterName
+MyCharacterDAO Created MyCharacter object 
+Ed:
+STR	DEX	CON	INT	WIS	CHA	
+10	11	12	10	11	14	
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered Edd for characterName
+MyCharacterDAO Created MyCharacter object 
+Edd:
+STR	DEX	CON	INT	WIS	CHA	
+9	14	10	12	12	12	
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered Eddie for characterName
+MyCharacterDAO Created MyCharacter object 
+Eddie:
+STR	DEX	CON	INT	WIS	CHA	
+13	7	9	11	8	15	
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 2 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 0 for pump to stat 
+User chose  character number 30 as dump value to pump 
+InvalidStatisticException created with message Charisma ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 2 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 0 for pump to stat 
+User chose  character number 6 as dump value to pump 
+MyCharacterDAO.update failed due to SQLException: [Ljava.lang.StackTraceElement;@4d0f2471
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 2 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 0 for pump to stat 
+User chose  character number 5 as dump value to pump 
+MyCharacterDAO Updated MyCharacter object 
+Eddie:
+STR	DEX	CON	INT	WIS	CHA	
+18	7	9	11	8	10	
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 2 within CharacterListMenu 
+Rendering CharacterCompareMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User entered 2 for choice a
+User entered 1 for choice b
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 9 within CharacterListMenu 
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 2 from CharacterModifyMenu 
+MyCharacterDAO Deleted MyCharacter object id 23
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 3 within CharacterListMenu 
+Rendering UserDashboardMenu
+User chose unsubscribe within UserDashboard
+UserDAO.delete succesful
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+InvalidEmailException created with message Email address must follow format user@domain, maximum length is 254.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidUsernameException created with message Usernames can only contain letters and the underscore character, maximum length is 40.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Minimum dump value is 1.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces, maximum length is 40.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number 2 from CharacterModifyMenu 
+User chose  character number 5 for dump from stat 
+User chose  character number 3 for pump to stat 
+User chose  character number 4 as dump value to pump 
+InvalidStatisticException created with message Intelligence ends up too high, try dumping fewer points. You cannot pump a stat so that its new value is above18.
+Rendering UserDashboardMenu
+User chose 3 within UserDashboard
+AppState.startup() finished

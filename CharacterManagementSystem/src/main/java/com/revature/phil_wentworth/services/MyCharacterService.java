@@ -116,7 +116,7 @@ public class MyCharacterService {
 	}
 	
 	public boolean isStatisticValid(int statistic) {
-		if (statistic >= min_stat && max_stat <= 18) {
+		if (statistic >= min_stat && statistic <= max_stat) {
 			return true;
 		}
 		return false;
