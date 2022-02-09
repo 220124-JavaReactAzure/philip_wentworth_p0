@@ -20,14 +20,22 @@ public class CharacterCompareMenu extends Menu {
 	@Override
 	public void render() throws Exception {
 		logger.log("Rendering CharacterCompareMenu");
-		
+
 		MyArrayList<MyCharacter> characters = myCharacterService.getCharactersForUser();
 
 		System.out.println("Enter a Character Number from above: ");
 		String userSelection = consoleReader.readLine();
 		logger.log("User entered " + userSelection + " for choice a");
-		
-		int choice_a = Integer.valueOf(userSelection);
+
+		int choice_a = -1;
+
+		try {
+			choice_a = Integer.valueOf(userSelection);
+		} catch (Exception e) {
+
+		} finally {
+
+		}
 
 		if (choice_a < 0 || choice_a >= characters.size()) {
 			System.out.println("Invalid Character Number. Must be between 0 and " + (characters.size() - 1));
@@ -36,26 +44,34 @@ public class CharacterCompareMenu extends Menu {
 		}
 
 		MyCharacter a = characters.get(choice_a);
-		
+
 		System.out.println("Enter a different Character Number from above: ");
 		userSelection = consoleReader.readLine();
 		logger.log("User entered " + userSelection + " for choice b");
-		
-		int choice_b = Integer.valueOf(userSelection);
+
+		int choice_b = -1;
+		;
+
+		try {
+			choice_b = Integer.valueOf(userSelection);
+		} catch (Exception e) {
+
+		} finally {
+
+		}
 
 		if (choice_b < 0 || choice_b >= characters.size()) {
 			System.out.println("Invalid Character Number. Must be between 0 and " + (characters.size() - 1));
 			router.transfer("/user_dashboard");
 			return;
-		}
-		else if (choice_b == choice_a) {
+		} else if (choice_b == choice_a) {
 			System.out.println("Cannot compare character to same character.");
 			router.transfer("/user_dashboard");
 			return;
 		}
 
 		MyCharacter b = characters.get(choice_b);
-		
+
 		myCharacterService.compareMyCharacters(a, b);
 		router.transfer("/user_dashboard");
 	}

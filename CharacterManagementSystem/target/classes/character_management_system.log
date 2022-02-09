@@ -179,3 +179,123 @@ InvalidCharacterNameException created with message Character names can only cont
 InvalidCharacterNameException created with message Character names can only contain letters and spaces.
 InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
 InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserRegisterMenu
+User entered not@demo as their email.
+UserDAO.findById exited without finding id
+UserDAO.findByUsername exited without finding username
+UserDAO.findByUsername exited without finding username
+UserDAO.findById exited without finding id
+UserDAO.create succesful
+Successfully registered not@demo as notthedemo
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered alpha for characterName
+MyCharacterDAO Created MyCharacter object 
+alpha:
+STR	DEX	CON	INT	WIS	CHA	
+13	10	13	13	5	10	
+Rendering UserDashboardMenu
+User chose 1 within UserDashboard
+Rendering CharacterGenerateMenu
+User entered bravo for characterName
+MyCharacterDAO Created MyCharacter object 
+bravo:
+STR	DEX	CON	INT	WIS	CHA	
+10	10	6	13	11	15	
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 2 within CharacterListMenu 
+Rendering CharacterCompareMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User entered 0 for choice a
+User entered 1 for choice b
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 3 within CharacterListMenu 
+Rendering UserDashboardMenu
+User chose 3 within UserDashboard
+AppState.startup() finished
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Strength ends up too low, try dumping fewer points. You cannot dump a stat so that its new value is less than 9.
+InvalidStatisticException created with message Minimum dump value is 1.
+InvalidCharacterNameException created with message Character names can only contain letters and spaces.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword exitied without finding username and password combination
+userService.authenticateUser returned false when called within UserLoginMenu
+Rendering UserRegisterMenu
+User entered -1 as their email.
+-1is not a valid email.
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected -1 within CharacterListMenu 
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number -1 from CharacterModifyMenu 
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number nope from CharacterModifyMenu 
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose nope within UserDashboard
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number nope from CharacterModifyMenu 
+AppState.startup() finished
+Logger initialized
+AppState initialized
+AppState.startup() called
+Rendering UserLoginMenu
+UserDAO.findByUsernameAndPassword found username and password combination
+userService.authenticateUser returned true when called within UserLoginMenu, routing to user dashboard
+Rendering UserDashboardMenu
+User chose 2 within UserDashboard
+Rendering CharacterListMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User selected 1 within CharacterListMenu 
+Rendering CharacterModifyMenu
+MyCharacterDAO.getMyCharactersByEmail returning successfully with approprate list of MyCharacter objects
+User chose  character number nope from CharacterModifyMenu 
+Rendering UserDashboardMenu

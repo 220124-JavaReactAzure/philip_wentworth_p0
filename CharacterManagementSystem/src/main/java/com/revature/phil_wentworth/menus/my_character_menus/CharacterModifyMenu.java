@@ -27,7 +27,17 @@ public class CharacterModifyMenu extends Menu {
 		String userSelection = consoleReader.readLine();
 		logger.log("User chose " + " character number " + userSelection + " from CharacterModifyMenu " );
 		
-		int choice = Integer.valueOf(userSelection);
+		int choice = -1;;
+		
+		try {
+			choice = Integer.valueOf(userSelection);
+		}
+		catch (Exception e) {
+			
+		}
+		finally {
+			
+		}
 		
 		if ( choice < 0 || choice >= characters.size() ) {
 			System.out.println("Invalid Character Number. Must be between 0 and " + (characters.size() - 1) );
