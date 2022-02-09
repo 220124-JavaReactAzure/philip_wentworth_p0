@@ -21,10 +21,10 @@ public class UserDashboardMenu extends Menu {
 		StringBuilder menuChoices = new StringBuilder(
 				userService.getSessionUser().getUsername() + " Dashboard: \n");
 
-		menuChoices.append("1. Generate Character\n");
-		menuChoices.append("2. View My Characters\n");
-		menuChoices.append("3. Logout\n");
-		menuChoices.append("unsubscribe. Delete your account. This cannot be undone.\n");
+		menuChoices.append("1). Generate Character\n");
+		menuChoices.append("2). View My Characters\n");
+		menuChoices.append("3). Logout\n");
+		menuChoices.append("unsubscribe). Delete your account. This cannot be undone.\n");
 		
 		boolean tryAgain = true;
 

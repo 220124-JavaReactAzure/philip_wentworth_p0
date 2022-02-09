@@ -18,7 +18,7 @@ public class CharacterDeleteMenu extends Menu {
 
 	public void render() throws Exception {
 		MyArrayList<MyCharacter> characters = myCharacterService.getCharactersForUser();
-		System.out.println("Enter a Character Number from above: ");
+		System.out.println("Enter a Character Number from above, this character will be permanently deleted: ");
 		String userSelection = consoleReader.readLine();
 		logger.log("User chose " + " character number " + userSelection + " from CharacterModifyMenu ");
 

@@ -21,6 +21,13 @@ public class CharacterListMenu extends Menu {
 		logger.log("Rendering CharacterListMenu");
 		
 		MyArrayList<MyCharacter> characters = myCharacterService.getCharactersForUser();
+		
+		if (characters.size() == 0) {
+			System.out.println("You have no characters.");
+			router.transfer("/user_dashboard");
+			return;
+		}
+		
 		for (int i=0; i<characters.size(); i++) {
 			System.out.print("\nCharacter " + i + ": " + characters.get(i) + "\n");
 		}
@@ -30,7 +37,7 @@ public class CharacterListMenu extends Menu {
 		menuChoices.append("1. Modify a Character\n");
 		menuChoices.append("2. Compare my Characters\n");
 		menuChoices.append("3. Return to my Dashboard\n");
-		menuChoices.append("9. Delete a Character. This cannot be undone.\n");
+		menuChoices.append("9. Delete a Character\n");
 		
 		boolean tryAgain = true;
 
