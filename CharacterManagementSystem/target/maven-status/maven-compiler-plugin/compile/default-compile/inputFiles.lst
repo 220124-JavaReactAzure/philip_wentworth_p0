@@ -1,0 +1,17 @@
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\services\UserService.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\models\MyCharacter.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\web\TestServlet.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\daos\MyCharacterDAO.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\exceptions\EmailAlreadyExistsException.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\exceptions\UsernameAlreadyExistsException.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\test\java\com\revature\phil_wentworth\services\UserServiceTestSuite.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\exceptions\InvalidEmailException.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\models\User.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\daos\UserDAO.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\test\java\com\revature\phil_wentworth\services\CharacterServiceTestSuite.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\exceptions\InvalidStatisticException.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\daos\CrudDAO.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\exceptions\InvalidCharacterNameException.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\exceptions\InvalidUsernameException.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\services\MyCharacterService.java
+C:\Users\guita\Desktop\Revature Coursework\philip_wentworth_p0\CharacterManagementSystem\src\main\java\com\revature\phil_wentworth\util\ConnectionFactory.java

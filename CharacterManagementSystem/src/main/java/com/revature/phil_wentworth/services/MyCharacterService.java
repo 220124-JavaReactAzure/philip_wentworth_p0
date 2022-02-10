@@ -1,16 +1,17 @@
 package com.revature.phil_wentworth.services;
 
+import java.util.ArrayList;
+
 import com.revature.phil_wentworth.daos.MyCharacterDAO;
 import com.revature.phil_wentworth.exceptions.InvalidCharacterNameException;
 import com.revature.phil_wentworth.exceptions.InvalidStatisticException;
 import com.revature.phil_wentworth.models.MyCharacter;
-import com.revature.phil_wentworth.util.MyArrayList;
 
 public class MyCharacterService {
 	
 	private UserService userService;
 	private MyCharacterDAO myCharacterDAO;
-	private MyArrayList<MyCharacter> activeCharacters;
+	private ArrayList<MyCharacter> activeCharacters;
 	public static final int min_dump_stat = 9;
 	public static final int min_stat = 3;
 	public static final int max_stat = 18;
@@ -38,12 +39,12 @@ public class MyCharacterService {
 		return c;
 	}
 	
-	public MyArrayList<MyCharacter> getCharactersForUser() {
+	public ArrayList<MyCharacter> getCharactersForUser() {
 		if (userService.getSessionUser() == null) {
 			return null;
 		}
 		String userEmail = userService.getSessionUser().getEmail();
-		activeCharacters = (MyArrayList<MyCharacter>) myCharacterDAO.getMyCharactersByEmail(userEmail);
+		activeCharacters = (ArrayList<MyCharacter>) myCharacterDAO.getMyCharactersByEmail(userEmail);
 		return activeCharacters;
 	}
 	

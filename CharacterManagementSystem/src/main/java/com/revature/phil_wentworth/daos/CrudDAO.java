@@ -1,6 +1,6 @@
 package com.revature.phil_wentworth.daos;
 
-import com.revature.phil_wentworth.util.MyList;
+import java.util.List;
 
 public interface CrudDAO<T> {
 
@@ -10,7 +10,7 @@ public interface CrudDAO<T> {
 	T create(T newObj);
 	
 	// Read
-	MyList<T> findAll();
+	List<T> findAll();
 	T findById(String id);
 	
 	// Update
